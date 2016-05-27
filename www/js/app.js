@@ -1,4 +1,4 @@
-$.mobile.defaultPageTransition = 'slide';
+// $.mobile.defaultPageTransition = 'slide';
 $(document).on('pageinit', '#muacTape', function() {
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
@@ -34,7 +34,7 @@ $(document).on('pageinit', '#muacTape', function() {
 }).on('pageinit', '#definitionOfHunger', function() {
 
 }).on('pageinit', '#registration', function() {
-    $('.fb-login').on('click', function(){
+    $('.fb-login').on('click', function() {
         login();
     })
 
