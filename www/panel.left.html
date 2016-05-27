@@ -1,0 +1,86 @@
+<!-- panel left -->
+<script src="bower_components/openfb/openfb.js"></script>
+<div data-role="panel" id="leftpanel" data-display="overlay" data-position-fixed="true">
+    <ul class="pre-login" data-role="listview" data-icon="false">
+        <li data-role="list-divider">Account</li>
+        <li><a href="facebook-login.html"><i class="zmdi zmdi-sign-in zmd-fw"></i> Register / Login</a></li>
+    </ul>
+    <hr class="inset">
+    <div class='nd2-sidepanel-profile wow fadeInDown post-login'>
+        <div class="row">
+            <div class='col-xs-4 center-xs'>
+                <div class='box'>
+                    <img class="profile-thumbnail" src="//lorempixel.com/200/200/people/9/" />
+                </div>
+            </div>
+            <div class='col-xs-8'>
+                <div class='box profile-text'>
+                    <strong class="profile-name">Username</strong>
+                    <a class='fb-logout ui-btn ui-mini ui-btn-inline ui-btn-raised clr-warning' onclick='logout()'>Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul data-role="listview" data-icon="false">
+        <li><a href="index.html">Home</a></li>
+    </ul>
+    <hr class="inset">
+    <ul data-role="listview" data-icon="false">
+        <li data-role="list-divider">Understandng Of Hunger</li>
+        <li><a href="definition-of-hunger.html">Definition Of Hunger</a></li>
+        <li><a href="muac-tape.html">MUAC Tape</a></li>
+        <li><a href="cause-of-hunger.html">Causes Of Hunger</a></li>
+        <li><a href="impact-of-hunger.html">Impact Of Hunger</a></li>
+    </ul>
+    <hr class="inset">
+    <ul data-role="listview" data-icon="false">
+        <li data-role="list-divider">Case Study</li>
+        <li><a href="case-study.html">Bengal Famine Of 1943</a></li>
+    </ul>
+    <hr class="inset">
+    <ul data-role="listview" data-icon="false">
+        <li data-role="list-divider">How Can We Help?</li>
+        <li><a href="child-sponsorship.html">Child Sponsorship</a></li>
+    </ul>
+</div>
+<!-- /panel left -->
+<script type="text/javascript">
+// document.addEventListener("deviceready", onDeviceReady, false);
+
+// var pageSearch = $(location).attr('search');
+var fbToken = window.localStorage.getItem("fbToken");
+var fbPic = window.localStorage.getItem("fbPic");
+var fbName = window.localStorage.getItem("fbName");
+
+
+if (fbToken != undefined) {
+    $('.pre-login').hide();
+    $('.profile-thumbnail').attr('src', fbPic);
+    $('.profile-name').html(fbName);
+    $('.post-login').show();
+} else {
+    $('.post-login').hide();
+    $('.pre-login').show();
+}
+
+openFB.init({
+    appId: '1301435016551511',
+    tokenStore: window.localStorage
+});
+
+
+function logout() {
+    openFB.logout(
+        function() {
+            window.localStorage.clear();
+            // alert('Logout successful');
+            $('.post-login').hide();
+            $('.pre-login').show();
+        },
+        errorHandler);
+}
+
+function errorHandler(error) {
+    alert(error.message);
+}
+</script>

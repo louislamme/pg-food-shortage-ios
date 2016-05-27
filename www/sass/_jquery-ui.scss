@@ -1,0 +1,30 @@
+// .ui-page { -webkit-backface-visibility: hidden; }
+.ui-header{
+    .ui-title{
+        // text-align: center;
+    }
+    img{
+        max-width: 60%;
+    }
+}
+.ui-header-fixed {
+    .ui-btn-left {
+        position: absolute;
+    }
+}
+.ui-page {
+    background: #222;
+}
+.ui-content{
+    color: #fff;
+}
+p.ui-listview{
+    color: #fff;
+    padding: .7em 1em;
+    @include text-shadow(none);
+}
+.ui-popup{
+    .ui-content{
+        color: #000;
+    }
+}

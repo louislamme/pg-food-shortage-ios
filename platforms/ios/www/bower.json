@@ -1,0 +1,33 @@
+{
+  "name": "bower.json",
+  "authors": [
+    "Louis"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "jquery-mobile-bower": "^1.4.5",
+    "nativeDroid2": "^2.0.2",
+    "font-awesome": "^4.6.3",
+    "Swiper": "swiper#^3.3.1",
+    "animate.css": "daneden/animate.css#^3.5.1",
+    "Waves": "waves#^0.7.5",
+    "wow": "matthieua/WOW#^1.1.2",
+    "openfb": "ccoenraets/OpenFB#^0.5.0",
+    "material-design-iconic-font": "^2.2.0"
+  }
+}

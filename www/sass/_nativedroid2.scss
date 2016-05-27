@@ -1,0 +1,89 @@
+.ui-page-theme-a .ui-btn,
+html .ui-bar-a .ui-btn,
+html .ui-body-a .ui-btn,
+html body .ui-group-theme-a .ui-btn,
+html head+body .ui-btn.ui-btn-a,
+.ui-page-theme-a .ui-btn:visited,
+html .ui-bar-a .ui-btn:visited,
+html .ui-body-a .ui-btn:visited,
+html body .ui-group-theme-a .ui-btn:visited,
+html head+body .ui-btn.ui-btn-a:visited,
+.ui-page-theme-a .ui-btn.ui-btn-active,
+html .ui-bar-a .ui-btn.ui-btn-active,
+html .ui-body-a .ui-btn.ui-btn-active,
+html body .ui-group-theme-a .ui-btn.ui-btn-active,
+html head+body .ui-btn.ui-btn-a.ui-btn-active,
+.ui-page-theme-a .ui-checkbox-on:after,
+html .ui-bar-a .ui-checkbox-on:after,
+html .ui-body-a .ui-checkbox-on:after,
+html body .ui-group-theme-a .ui-checkbox-on:after,
+.ui-btn.ui-checkbox-on.ui-btn-a:after,
+.ui-page-theme-a .ui-flipswitch-active,
+html .ui-bar-a .ui-flipswitch-active,
+html .ui-body-a .ui-flipswitch-active,
+html body .ui-group-theme-a .ui-flipswitch-active,
+html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active,
+.ui-page-theme-a .ui-slider-track .ui-btn-active,
+html .ui-bar-a .ui-slider-track .ui-btn-active,
+html .ui-body-a .ui-slider-track .ui-btn-active,
+html body .ui-group-theme-a .ui-slider-track .ui-btn-active,
+html body div.ui-slider-track.ui-body-a .ui-btn-active {
+    @include border-radius(0);
+}
+
+.ui-content {
+    .ui-collapsible {
+        .ui-btn-icon-left {
+            padding-left: 2.5em;
+        }
+        .waves-effect.ui-btn {
+            text-align: left;
+            display: block;
+        }
+        &:not(.ui-collapsible-collapsed) {
+            background-color: #333;
+            a.ui-collapsible-heading-toggle {
+                color: #fff;
+                background-color: #333;
+            }
+        }
+        &.ui-collapsible-collapsed {
+            background-color: #222;
+        }
+    }
+    .ui-collapsible-content.ui-body-inherit {
+        // background: #222;
+    }
+    hr {
+        border-top: 1px solid #333;
+    }
+    .nd2Tabs-content-tab {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.nd2-sidepanel-profile {
+    padding: 1.5em 1em;
+    background: #222;
+    .profile-thumbnail{
+        margin: -0.5em auto;
+    }
+    .fb-logout {
+        margin-top: .5em;
+        padding: .5em 1em;
+    }
+}
+
+.ui-controlgroup-horizontal {
+    .ui-controlgroup-label {
+        legend {
+            margin-bottom: 5px;
+        }
+    }
+    .ui-controlgroup-controls {
+        .ui-btn {
+            background-color: #666;
+        }
+    }
+}

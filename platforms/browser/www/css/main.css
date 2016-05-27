@@ -1,0 +1,791 @@
+/* line 2, ../sass/_responsive.scss */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 1, ../sass/_page.scss */
+body {
+  background: #000 !important;
+  opacity: 0;
+}
+/* line 4, ../sass/_page.scss */
+body #home {
+  overflow: hidden;
+}
+/* line 6, ../sass/_page.scss */
+body #home.ui-page-active {
+  height: 100%;
+  background: #000 url(../img/hero-home.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* line 14, ../sass/_page.scss */
+body #home .ui-header {
+  min-height: 65px;
+  background: none;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+/* line 19, ../sass/_page.scss */
+body #home .ui-content {
+  text-align: center;
+  padding: 0 1.5em;
+  position: relative;
+  top: -65px;
+}
+/* line 24, ../sass/_page.scss */
+body #home .ui-content h3 {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+/* line 32, ../sass/_page.scss */
+body #home .ui-content h3 strong {
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: .1em .2em;
+  line-height: 1.4em;
+}
+/* line 40, ../sass/_page.scss */
+body #home .ui-content h3.last-child {
+  margin-bottom: .5em;
+}
+/* line 47, ../sass/_page.scss */
+body #registration .fb-login {
+  text-indent: -9999px;
+  height: 36px;
+  background: #2f5f9e url("../img/fbconnect.png") center center no-repeat;
+  background-size: auto 42px;
+}
+/* line 54, ../sass/_page.scss */
+body #loginSuccess {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* line 59, ../sass/_page.scss */
+body #loginSuccess h2 {
+  margin-top: 0;
+}
+/* line 64, ../sass/_page.scss */
+body #childSponsorship .ui-controlgroup-controls {
+  width: 100%;
+}
+/* line 66, ../sass/_page.scss */
+body #childSponsorship .ui-controlgroup-controls .ui-radio {
+  width: 33.33333%;
+}
+/* line 68, ../sass/_page.scss */
+body #childSponsorship .ui-controlgroup-controls .ui-radio .ui-btn {
+  text-align: center;
+}
+/* line 76, ../sass/_page.scss */
+body #impactOfHunger .body-structure img {
+  opacity: 0.7;
+}
+/* line 79, ../sass/_page.scss */
+body #impactOfHunger .body-structure .spot {
+  width: 20px;
+  height: 20px;
+  background: #f44336;
+  padding: 0;
+  border: 5px solid #fff;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 20px;
+  animation-name: zooming;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+/* line 96, ../sass/_page.scss */
+body #impactOfHunger .body-structure .spot.spot-1 {
+  margin-left: -15px;
+  top: 15%;
+  left: 50%;
+}
+/* line 101, ../sass/_page.scss */
+body #impactOfHunger .body-structure .spot.spot-2 {
+  margin-left: -15px;
+  top: 45%;
+  left: 50%;
+}
+/* line 106, ../sass/_page.scss */
+body #impactOfHunger .body-structure .spot.spot-3 {
+  margin-left: -58px;
+  top: 48%;
+  left: 50%;
+}
+/* line 111, ../sass/_page.scss */
+body #impactOfHunger .body-structure .spot.spot-4 {
+  margin-left: -90px;
+  top: 37%;
+  left: 50%;
+}
+/* line 116, ../sass/_page.scss */
+body #impactOfHunger .body-structure .spot.spot-5 {
+  top: 55%;
+  left: 77%;
+}
+
+@-webkit-keyframes zooming {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+/* line 6, ../sass/_jquery-ui.scss */
+.ui-header img {
+  max-width: 60%;
+}
+
+/* line 11, ../sass/_jquery-ui.scss */
+.ui-header-fixed .ui-btn-left {
+  position: absolute;
+}
+
+/* line 15, ../sass/_jquery-ui.scss */
+.ui-page {
+  background: #222;
+}
+
+/* line 18, ../sass/_jquery-ui.scss */
+.ui-content {
+  color: #fff;
+}
+
+/* line 21, ../sass/_jquery-ui.scss */
+p.ui-listview {
+  color: #fff;
+  padding: .7em 1em;
+  text-shadow: none;
+}
+
+/* line 27, ../sass/_jquery-ui.scss */
+.ui-popup .ui-content {
+  color: #000;
+}
+
+/*!
+ * Waves v0.7.2
+ * http://fian.my.id/Waves 
+ * 
+ * Copyright 2014 Alfiana E. Sibuea and other contributors 
+ * Released under the MIT license 
+ * https://github.com/fians/Waves/blob/master/LICENSE 
+ */
+/* line 10, ../sass/_waves.scss */
+.waves-effect {
+  /*	position: relative;*/
+  cursor: pointer;
+  /*	display: inline-block;*/
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 21, ../sass/_waves.scss */
+.waves-effect .waves-ripple {
+  position: absolute;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.2);
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.5) 60%, rgba(255, 255, 255, 0) 70%);
+  background: -o-radial-gradient(rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.5) 60%, rgba(255, 255, 255, 0) 70%);
+  background: -moz-radial-gradient(rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.5) 60%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.5) 60%, rgba(255, 255, 255, 0) 70%);
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
+  -webkit-transform: scale(0) translate(0, 0);
+  -moz-transform: scale(0) translate(0, 0);
+  -ms-transform: scale(0) translate(0, 0);
+  -o-transform: scale(0) translate(0, 0);
+  transform: scale(0) translate(0, 0);
+  pointer-events: none;
+}
+
+/* line 49, ../sass/_waves.scss */
+.waves-effect.waves-light .waves-ripple {
+  background: rgba(255, 255, 255, 0.4);
+  background: -webkit-radial-gradient(rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 70%);
+  background: -o-radial-gradient(rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 70%);
+  background: -moz-radial-gradient(rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 70%);
+}
+
+/* line 56, ../sass/_waves.scss */
+.waves-effect.waves-classic .waves-ripple {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* line 59, ../sass/_waves.scss */
+.waves-effect.waves-classic.waves-light .waves-ripple {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* line 62, ../sass/_waves.scss */
+.waves-notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+/* line 68, ../sass/_waves.scss */
+.waves-button, .waves-circle {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  /*-webkit-mask-image: -webkit-radial-gradient(circle,#fff 100%,#000 100%)*/
+}
+
+/* line 76, ../sass/_waves.scss */
+.waves-button, .waves-button:hover, .waves-button:visited, .waves-button-input {
+  white-space: nowrap;
+  /*	vertical-align: middle;*/
+  cursor: pointer;
+  /*	border: none;*/
+  outline: 0;
+  color: inherit;
+  background-color: transparent;
+  /*	font-size: 1em;
+  	line-height: 1em;
+  	text-align: center;
+  	text-decoration: none;*/
+  z-index: 1;
+}
+
+/* line 90, ../sass/_waves.scss */
+.waves-button {
+  /*	padding: .85em 1.1em;
+  	border-radius: .2em*/
+}
+
+/* line 94, ../sass/_waves.scss */
+.waves-button-input {
+  /*	margin: 0;
+  	padding: .85em 1.1em*/
+}
+
+/* line 98, ../sass/_waves.scss */
+.waves-input-wrapper {
+  /*	border-radius: .2em;*/
+  vertical-align: bottom;
+}
+
+/* line 102, ../sass/_waves.scss */
+.waves-input-wrapper.waves-button {
+  padding: 0;
+}
+
+/* line 105, ../sass/_waves.scss */
+.waves-input-wrapper .waves-button-input {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* line 111, ../sass/_waves.scss */
+.waves-circle {
+  text-align: center;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  border-radius: 50%;
+}
+
+/* line 118, ../sass/_waves.scss */
+.waves-float {
+  -webkit-mask-image: none;
+  /*box-shadow: 0 1px 1.5px 1px rgba(0,0,0,.12);*/
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
+}
+
+/* line 126, ../sass/_waves.scss */
+.waves-float:active {
+  /*box-shadow: 0 8px 20px 1px rgba(0,0,0,.3)*/
+}
+
+/* line 129, ../sass/_waves.scss */
+.waves-block {
+  display: block;
+}
+
+/* line 132, ../sass/_waves.scss */
+a.waves-effect .waves-ripple {
+  z-index: -1;
+}
+
+/*
+ * Color Definition Sheet
+ */
+/* line 7, ../sass/_nativedroid2.color.scss */
+.nd2-bg-500 {
+  background-color: #000;
+  color: #ffffff;
+}
+
+/*
+ * Custom Styles
+ *
+ */
+/* line 14, ../sass/_nativedroid2.color.scss */
+.ui-page-theme-a .ui-header {
+  background-color: #000;
+  color: #ffffff;
+}
+
+/* line 19, ../sass/_nativedroid2.color.scss */
+.ui-page-theme-a .ui-footer {
+  background-color: #ffffff;
+  color: #323232;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+}
+
+/* line 26, ../sass/_nativedroid2.color.scss */
+li.ui-tabs-active > .ui-link.ui-btn.ui-tabs-anchor,
+.ui-page-theme-a .ui-btn.clr-primary {
+  color: #000;
+}
+
+/* line 31, ../sass/_nativedroid2.color.scss */
+.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a,
+.ui-page-theme-a a:hover, html .ui-bar-a a:hover, html .ui-body-a a:hover, html body .ui-group-theme-a a:hover,
+.ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited {
+  color: #000;
+}
+
+/* line 37, ../sass/_nativedroid2.color.scss */
+.ui-page-theme-a .ui-btn.clr-warning {
+  color: #f44336;
+}
+
+/* line 41, ../sass/_nativedroid2.color.scss */
+.ui-page-theme-a .ui-btn.ui-btn-raised.clr-primary {
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* line 46, ../sass/_nativedroid2.color.scss */
+.ui-page-theme-a .ui-btn.ui-btn-raised.clr-warning {
+  background-color: #f44336;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* line 51, ../sass/_nativedroid2.color.scss */
+.ui-page-theme-a .ui-radio .ui-btn.ui-radio-on:before {
+  background-color: #000;
+}
+
+/* line 55, ../sass/_nativedroid2.color.scss */
+.ui-page-theme-a .ui-btn.ui-radio-on:after {
+  border-color: #000;
+}
+
+/* line 59, ../sass/_nativedroid2.color.scss */
+html .ui-page-theme-a .ui-btn.ui-checkbox-on.ui-checkbox-on:after {
+  background-color: #000;
+  border-color: #000;
+}
+
+/* line 64, ../sass/_nativedroid2.color.scss */
+.ui-controlgroup-horizontal .ui-controlgroup-controls .ui-btn.ui-checkbox-on,
+.ui-controlgroup-horizontal .ui-controlgroup-controls .ui-btn.ui-radio-on {
+  background-color: #000;
+  color: #ffffff;
+}
+
+/* line 70, ../sass/_nativedroid2.color.scss */
+.ui-input-text.ui-focus:after,
+.ui-input-search.ui-focus:after {
+  background-color: #000;
+  height: 2px;
+}
+
+/* line 76, ../sass/_nativedroid2.color.scss */
+textarea.ui-input-text.ui-textinput-autogrow.ui-focus {
+  border-bottom: 2px solid #000;
+}
+
+/* line 80, ../sass/_nativedroid2.color.scss */
+.ui-page-theme-a .ui-flipswitch-active, html .ui-bar-a .ui-flipswitch-active, html .ui-body-a .ui-flipswitch-active, html body .ui-group-theme-a .ui-flipswitch-active, html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active {
+  color: #ffffff !important;
+  background-color: #000 !important;
+}
+
+/* line 85, ../sass/_nativedroid2.color.scss */
+.ui-page-theme-a .ui-slider-track .ui-btn-active, html .ui-bar-a .ui-slider-track .ui-btn-active, html .ui-body-a .ui-slider-track .ui-btn-active, html body .ui-group-theme-a .ui-slider-track .ui-btn-active, html body div.ui-slider-track.ui-body-a .ui-btn-active,
+.ui-slider-track .ui-btn.ui-slider-handle {
+  background-color: #000 !important;
+}
+
+/* Chart-Color-Palette: cyan */
+/* --- */
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-a .ct-bar, .nd2-chart .ct-series-a .ct-line, .nd2-chart .ct-series-a .ct-point, .nd2-chart .ct-series-a .ct-slice-donut {
+  stroke: #000;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-a .ct-area, .nd2-chart .ct-series-a .ct-slice-pie {
+  fill: #000;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-b .ct-bar, .nd2-chart .ct-series-b .ct-line, .nd2-chart .ct-series-b .ct-point, .nd2-chart .ct-series-b .ct-slice-donut {
+  stroke: #009688;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-b .ct-area, .nd2-chart .ct-series-b .ct-slice-pie {
+  fill: #009688;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-c .ct-bar, .nd2-chart .ct-series-c .ct-line, .nd2-chart .ct-series-c .ct-point, .nd2-chart .ct-series-c .ct-slice-donut {
+  stroke: #4CAF50;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-c .ct-area, .nd2-chart .ct-series-c .ct-slice-pie {
+  fill: #4CAF50;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-d .ct-bar, .nd2-chart .ct-series-d .ct-line, .nd2-chart .ct-series-d .ct-point, .nd2-chart .ct-series-d .ct-slice-donut {
+  stroke: #8BC34A;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-d .ct-area, .nd2-chart .ct-series-d .ct-slice-pie {
+  fill: #8BC34A;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-e .ct-bar, .nd2-chart .ct-series-e .ct-line, .nd2-chart .ct-series-e .ct-point, .nd2-chart .ct-series-e .ct-slice-donut {
+  stroke: #CDDC39;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-e .ct-area, .nd2-chart .ct-series-e .ct-slice-pie {
+  fill: #CDDC39;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-f .ct-bar, .nd2-chart .ct-series-f .ct-line, .nd2-chart .ct-series-f .ct-point, .nd2-chart .ct-series-f .ct-slice-donut {
+  stroke: #FFEB3B;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-f .ct-area, .nd2-chart .ct-series-f .ct-slice-pie {
+  fill: #FFEB3B;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-g .ct-bar, .nd2-chart .ct-series-g .ct-line, .nd2-chart .ct-series-g .ct-point, .nd2-chart .ct-series-g .ct-slice-donut {
+  stroke: #FFC107;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-g .ct-area, .nd2-chart .ct-series-g .ct-slice-pie {
+  fill: #FFC107;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-h .ct-bar, .nd2-chart .ct-series-h .ct-line, .nd2-chart .ct-series-h .ct-point, .nd2-chart .ct-series-h .ct-slice-donut {
+  stroke: #FF9800;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-h .ct-area, .nd2-chart .ct-series-h .ct-slice-pie {
+  fill: #FF9800;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-i .ct-bar, .nd2-chart .ct-series-i .ct-line, .nd2-chart .ct-series-i .ct-point, .nd2-chart .ct-series-i .ct-slice-donut {
+  stroke: #FF5722;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-i .ct-area, .nd2-chart .ct-series-i .ct-slice-pie {
+  fill: #FF5722;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-j .ct-bar, .nd2-chart .ct-series-j .ct-line, .nd2-chart .ct-series-j .ct-point, .nd2-chart .ct-series-j .ct-slice-donut {
+  stroke: #795548;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-j .ct-area, .nd2-chart .ct-series-j .ct-slice-pie {
+  fill: #795548;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-k .ct-bar, .nd2-chart .ct-series-k .ct-line, .nd2-chart .ct-series-k .ct-point, .nd2-chart .ct-series-k .ct-slice-donut {
+  stroke: #9E9E9E;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-k .ct-area, .nd2-chart .ct-series-k .ct-slice-pie {
+  fill: #9E9E9E;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-l .ct-bar, .nd2-chart .ct-series-l .ct-line, .nd2-chart .ct-series-l .ct-point, .nd2-chart .ct-series-l .ct-slice-donut {
+  stroke: #607D8B;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-l .ct-area, .nd2-chart .ct-series-l .ct-slice-pie {
+  fill: #607D8B;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-m .ct-bar, .nd2-chart .ct-series-m .ct-line, .nd2-chart .ct-series-m .ct-point, .nd2-chart .ct-series-m .ct-slice-donut {
+  stroke: #F44336;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-m .ct-area, .nd2-chart .ct-series-m .ct-slice-pie {
+  fill: #F44336;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-n .ct-bar, .nd2-chart .ct-series-n .ct-line, .nd2-chart .ct-series-n .ct-point, .nd2-chart .ct-series-n .ct-slice-donut {
+  stroke: #E91E63;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-n .ct-area, .nd2-chart .ct-series-n .ct-slice-pie {
+  fill: #E91E63;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-o .ct-bar, .nd2-chart .ct-series-o .ct-line, .nd2-chart .ct-series-o .ct-point, .nd2-chart .ct-series-o .ct-slice-donut {
+  stroke: #9C27B0;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-o .ct-area, .nd2-chart .ct-series-o .ct-slice-pie {
+  fill: #9C27B0;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-p .ct-bar, .nd2-chart .ct-series-p .ct-line, .nd2-chart .ct-series-p .ct-point, .nd2-chart .ct-series-p .ct-slice-donut {
+  stroke: #673AB7;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-p .ct-area, .nd2-chart .ct-series-p .ct-slice-pie {
+  fill: #673AB7;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-q .ct-bar, .nd2-chart .ct-series-q .ct-line, .nd2-chart .ct-series-q .ct-point, .nd2-chart .ct-series-q .ct-slice-donut {
+  stroke: #3F51B5;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-q .ct-area, .nd2-chart .ct-series-q .ct-slice-pie {
+  fill: #3F51B5;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-r .ct-bar, .nd2-chart .ct-series-r .ct-line, .nd2-chart .ct-series-r .ct-point, .nd2-chart .ct-series-r .ct-slice-donut {
+  stroke: #2196F3;
+}
+
+/* line 92, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-r .ct-area, .nd2-chart .ct-series-r .ct-slice-pie {
+  fill: #2196F3;
+}
+
+/* line 1, ../sass/_nativedroid2.scss */
+.ui-page-theme-a .ui-btn,
+html .ui-bar-a .ui-btn,
+html .ui-body-a .ui-btn,
+html body .ui-group-theme-a .ui-btn,
+html head + body .ui-btn.ui-btn-a,
+.ui-page-theme-a .ui-btn:visited,
+html .ui-bar-a .ui-btn:visited,
+html .ui-body-a .ui-btn:visited,
+html body .ui-group-theme-a .ui-btn:visited,
+html head + body .ui-btn.ui-btn-a:visited,
+.ui-page-theme-a .ui-btn.ui-btn-active,
+html .ui-bar-a .ui-btn.ui-btn-active,
+html .ui-body-a .ui-btn.ui-btn-active,
+html body .ui-group-theme-a .ui-btn.ui-btn-active,
+html head + body .ui-btn.ui-btn-a.ui-btn-active,
+.ui-page-theme-a .ui-checkbox-on:after,
+html .ui-bar-a .ui-checkbox-on:after,
+html .ui-body-a .ui-checkbox-on:after,
+html body .ui-group-theme-a .ui-checkbox-on:after,
+.ui-btn.ui-checkbox-on.ui-btn-a:after,
+.ui-page-theme-a .ui-flipswitch-active,
+html .ui-bar-a .ui-flipswitch-active,
+html .ui-body-a .ui-flipswitch-active,
+html body .ui-group-theme-a .ui-flipswitch-active,
+html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active,
+.ui-page-theme-a .ui-slider-track .ui-btn-active,
+html .ui-bar-a .ui-slider-track .ui-btn-active,
+html .ui-body-a .ui-slider-track .ui-btn-active,
+html body .ui-group-theme-a .ui-slider-track .ui-btn-active,
+html body div.ui-slider-track.ui-body-a .ui-btn-active {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 36, ../sass/_nativedroid2.scss */
+.ui-content .ui-collapsible .ui-btn-icon-left {
+  padding-left: 2.5em;
+}
+/* line 39, ../sass/_nativedroid2.scss */
+.ui-content .ui-collapsible .waves-effect.ui-btn {
+  text-align: left;
+  display: block;
+}
+/* line 43, ../sass/_nativedroid2.scss */
+.ui-content .ui-collapsible:not(.ui-collapsible-collapsed) {
+  background-color: #333;
+}
+/* line 45, ../sass/_nativedroid2.scss */
+.ui-content .ui-collapsible:not(.ui-collapsible-collapsed) a.ui-collapsible-heading-toggle {
+  color: #fff;
+  background-color: #333;
+}
+/* line 50, ../sass/_nativedroid2.scss */
+.ui-content .ui-collapsible.ui-collapsible-collapsed {
+  background-color: #222;
+}
+/* line 57, ../sass/_nativedroid2.scss */
+.ui-content hr {
+  border-top: 1px solid #333;
+}
+/* line 60, ../sass/_nativedroid2.scss */
+.ui-content .nd2Tabs-content-tab {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* line 66, ../sass/_nativedroid2.scss */
+.nd2-sidepanel-profile {
+  padding: 1.5em 1em;
+  background: #222;
+}
+/* line 69, ../sass/_nativedroid2.scss */
+.nd2-sidepanel-profile .profile-thumbnail {
+  margin: -0.5em auto;
+}
+/* line 72, ../sass/_nativedroid2.scss */
+.nd2-sidepanel-profile .fb-logout {
+  margin-top: .5em;
+  padding: .5em 1em;
+}
+
+/* line 80, ../sass/_nativedroid2.scss */
+.ui-controlgroup-horizontal .ui-controlgroup-label legend {
+  margin-bottom: 5px;
+}
+/* line 85, ../sass/_nativedroid2.scss */
+.ui-controlgroup-horizontal .ui-controlgroup-controls .ui-btn {
+  background-color: #666;
+}
+
+/* line 1, ../sass/_swiper.scss */
+.swiper-container {
+  width: 100%;
+  height: 40%;
+}
+/* line 5, ../sass/_swiper.scss */
+.swiper-container .parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 240%;
+  height: 40%;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+  background-position: center left;
+  background-repeat: no-repeat;
+}
+/* line 16, ../sass/_swiper.scss */
+.swiper-container .swiper-wrapper {
+  height: 40%;
+}
+/* line 18, ../sass/_swiper.scss */
+.swiper-container .swiper-wrapper h3 {
+  margin: 20px 0 0;
+}
+/* line 21, ../sass/_swiper.scss */
+.swiper-container .swiper-wrapper h4,
+.swiper-container .swiper-wrapper p {
+  margin: 10px 0;
+}
+/* line 25, ../sass/_swiper.scss */
+.swiper-container .swiper-wrapper .swiper-slide {
+  font-size: 18px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 90px 0 40px;
+}
+/* line 33, ../sass/_swiper.scss */
+.swiper-container .swiper-pagination-bullet {
+  background: #ddd;
+}
+/* line 35, ../sass/_swiper.scss */
+.swiper-container .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #ddd;
+}
+
+/* line 41, ../sass/_swiper.scss */
+.swiper-container-coverflow {
+  width: 100%;
+  padding-bottom: 50px;
+}
+/* line 44, ../sass/_swiper.scss */
+.swiper-container-coverflow .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
