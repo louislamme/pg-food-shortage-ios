@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Membership
+    </title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="bower_components/jquery-mobile-bower/css/jquery.mobile-1.4.5.css"/>
+    <!-- <link rel="stylesheet" href="bower_components/Waves/dist/waves.min.css" /> -->
+    <link rel="stylesheet" href="bower_components/nativeDroid2/css/nativedroid2.css"/>
+    <link rel="stylesheet" href="bower_components/wow/css/libs/animate.css"/>
+    <link rel="stylesheet" href="bower_components/Swiper/dist/css/swiper.min.css"/>
+    <link rel="stylesheet" href="bower_components/youtubeBackground/src/style.css"/>
+    <link rel="stylesheet" href="bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body>
+    <div id="membership" data-role="page" class="nd2-no-menu-swipe">
+      <nd2-include data-src="panel.left.html"></nd2-include>
+      <div data-role="header" data-position="fixed" data-tap-toggle="false">
+        <a href="#leftpanel" class="ui-btn ui-btn-left">
+          <i class="fa fa-bars"></i>
+        </a>
+        <h4>
+          Register / Login
+        </h4>
+        <ul data-role="nd2tabs" data-swipe="false">
+          <li data-tab="login" data-tab-active="true" class="nd2Tabs-active">
+            Login
+          </li>
+          <li data-tab="register">
+            Register
+          </li>
+        </ul>
+      </div>
+      <div data-role="main" class="ui-content">
+        <div data-role="nd2tab" data-tab="login" class="nd2Tab-active">
+          <form class="form-login">
+            <label for="username">
+              Username
+            </label>
+            <input type="text" class="username" name="username" data-clear-btn="true" placeholder="Your username" required/>
+            <label for="password">
+              Password
+            </label>
+            <input type="password" class="password" name="password" data-clear-btn="true" placeholder="Enter a password (at least 6 characters)" required/>
+            <br/>
+            <a class="btn-login ui-btn ui-btn-raised clr-warning">
+              Login
+            </a>
+          </form>
+          <br/>
+          <hr/>
+          <p>
+            Or you can login with your facebook account.
+          </p>
+          <a class="fb-login ui-btn ui-btn-raised clr-facebook">
+            facebook connect
+          </a>
+        </div>
+        <div data-role="nd2tab" data-tab="register">
+          <form class="form-register">
+            <label for="username">
+              Username
+            </label>
+            <input type="text" class="username" name="username" data-clear-btn="true" placeholder="Your username" required/>
+            <label for="email">
+              Email
+            </label>
+            <input type="text" class="email" name="email" data-clear-btn="true" placeholder="Your email" required/>
+            <label for="password">
+              Password
+            </label>
+            <input type="password" class="password" name="password" data-clear-btn="true" placeholder="Enter a password (at least 6 characters)" required/>
+            <label for="gender">
+              Gender
+            </label>
+            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+              <input type="radio" class="gender" name="gender" id="male" value="male" checked="checked"/>
+              <label for="male">
+                Male
+              </label>
+              <input type="radio" class="gender" name="gender" id="female" value="female"/>
+              <label for="female">
+                Female
+              </label>
+            </fieldset>
+            <br/>
+            <a class="btn-register ui-btn ui-btn-raised clr-warning">
+              Register
+            </a>
+          </form>
+        </div>
+      </div>
+      <div data-role="popup" class="popup-message" data-transition="pop">
+        <div data-role="content">
+          <h3></h3>
+          <p></p>
+          <a href="#" data-rel="back" data-role="button" data-inline="true" class="ui-btn clr-warning">
+            Close
+          </a>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="bower_components/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="bower_components/Waves/dist/waves.min.js"></script>
+    <script src="bower_components/openfb/openfb.js"></script>
+    <script src="bower_components/wow/dist/wow.min.js"></script>
+    <script src="bower_components/nativeDroid2/js/nativedroid2.js"></script>
+    <script src="bower_components/nativeDroid2/nd2settings.js"></script>
+    <script src="bower_components/Swiper/dist/js/swiper.min.js"></script>
+    <script src="bower_components/youtubeBackground/src/jquery.youtubebackground.js"></script>
+    <script src="bower_components/responsive-youtube-player-with-playlist/js/RYPP.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

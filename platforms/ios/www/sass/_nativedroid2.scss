@@ -87,3 +87,9 @@ html body div.ui-slider-track.ui-body-a .ui-btn-active {
         }
     }
 }
+.ui-input-text{
+    background: none !important;
+    input{
+        @include text-shadow(rgba(blue, 0) 0 0 0);
+    }
+}

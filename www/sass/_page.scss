@@ -1,3 +1,8 @@
+html{
+    &.home{
+        overflow: hidden;
+    }
+}
 body {
     background: #000 !important;
     opacity: 0;
@@ -5,11 +10,14 @@ body {
         overflow: hidden;
         &.ui-page-active {
             height: 100%;
-            background: #000 url(../img/hero-home.jpg) no-repeat;
-            background-size: cover;
+            background: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
+            &.bg-img{
+                background: #000 url(../img/hero-home.jpg) no-repeat;
+                background-size: cover;
+            }
         }
         .ui-header {
             min-height: 65px;
@@ -22,6 +30,7 @@ body {
             position: relative;
             top: -65px;
             h3 {
+                font-size: 30px;
                 text-transform: uppercase;
                 color: #fff;
                 // background: #000;
@@ -42,8 +51,12 @@ body {
                 }
             }
         }
+        .bg-video{
+            z-index: -1;
+            opacity: 0.6;
+        }
     }
-    #registration {
+    #membership {
         .fb-login {
             text-indent: -9999px;
             height: 36px;
@@ -51,7 +64,8 @@ body {
             background-size: auto 42px;
         }
     }
-    #loginSuccess {
+    #loginSuccess,
+    #logoutSuccess {
         text-align: center;
         display: flex;
         align-items: center;

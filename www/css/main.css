@@ -1,28 +1,38 @@
+@charset "UTF-8";
 /* line 2, ../sass/_responsive.scss */
 .img-responsive {
   max-width: 100%;
   height: auto;
 }
 
-/* line 1, ../sass/_page.scss */
+/* line 2, ../sass/_page.scss */
+html.home {
+  overflow: hidden;
+}
+
+/* line 6, ../sass/_page.scss */
 body {
   background: #000 !important;
   opacity: 0;
 }
-/* line 4, ../sass/_page.scss */
+/* line 9, ../sass/_page.scss */
 body #home {
   overflow: hidden;
 }
-/* line 6, ../sass/_page.scss */
+/* line 11, ../sass/_page.scss */
 body #home.ui-page-active {
   height: 100%;
-  background: #000 url(../img/hero-home.jpg) no-repeat;
-  background-size: cover;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-/* line 14, ../sass/_page.scss */
+/* line 17, ../sass/_page.scss */
+body #home.ui-page-active.bg-img {
+  background: #000 url(../img/hero-home.jpg) no-repeat;
+  background-size: cover;
+}
+/* line 22, ../sass/_page.scss */
 body #home .ui-header {
   min-height: 65px;
   background: none;
@@ -30,65 +40,73 @@ body #home .ui-header {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
-/* line 19, ../sass/_page.scss */
+/* line 27, ../sass/_page.scss */
 body #home .ui-content {
   text-align: center;
   padding: 0 1.5em;
   position: relative;
   top: -65px;
 }
-/* line 24, ../sass/_page.scss */
+/* line 32, ../sass/_page.scss */
 body #home .ui-content h3 {
+  font-size: 30px;
   text-transform: uppercase;
   color: #fff;
   margin: 0;
 }
-/* line 32, ../sass/_page.scss */
+/* line 41, ../sass/_page.scss */
 body #home .ui-content h3 strong {
   font-size: 1.6em;
   font-weight: bold;
   padding: .1em .2em;
   line-height: 1.4em;
 }
-/* line 40, ../sass/_page.scss */
+/* line 49, ../sass/_page.scss */
 body #home .ui-content h3.last-child {
   margin-bottom: .5em;
 }
-/* line 47, ../sass/_page.scss */
-body #registration .fb-login {
+/* line 54, ../sass/_page.scss */
+body #home .bg-video {
+  z-index: -1;
+  opacity: 0.6;
+}
+/* line 60, ../sass/_page.scss */
+body #membership .fb-login {
   text-indent: -9999px;
   height: 36px;
   background: #2f5f9e url("../img/fbconnect.png") center center no-repeat;
   background-size: auto 42px;
 }
-/* line 54, ../sass/_page.scss */
-body #loginSuccess {
+/* line 67, ../sass/_page.scss */
+body #loginSuccess,
+body #logoutSuccess {
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-/* line 59, ../sass/_page.scss */
-body #loginSuccess h2 {
+/* line 73, ../sass/_page.scss */
+body #loginSuccess h2,
+body #logoutSuccess h2 {
   margin-top: 0;
 }
-/* line 64, ../sass/_page.scss */
+/* line 78, ../sass/_page.scss */
 body #childSponsorship .ui-controlgroup-controls {
   width: 100%;
 }
-/* line 66, ../sass/_page.scss */
+/* line 80, ../sass/_page.scss */
 body #childSponsorship .ui-controlgroup-controls .ui-radio {
   width: 33.33333%;
 }
-/* line 68, ../sass/_page.scss */
+/* line 82, ../sass/_page.scss */
 body #childSponsorship .ui-controlgroup-controls .ui-radio .ui-btn {
   text-align: center;
 }
-/* line 76, ../sass/_page.scss */
+/* line 90, ../sass/_page.scss */
 body #impactOfHunger .body-structure img {
   opacity: 0.7;
 }
-/* line 79, ../sass/_page.scss */
+/* line 93, ../sass/_page.scss */
 body #impactOfHunger .body-structure .spot {
   width: 20px;
   height: 20px;
@@ -111,31 +129,31 @@ body #impactOfHunger .body-structure .spot {
   animation-iteration-count: infinite;
   animation-direction: normal;
 }
-/* line 96, ../sass/_page.scss */
+/* line 110, ../sass/_page.scss */
 body #impactOfHunger .body-structure .spot.spot-1 {
   margin-left: -15px;
   top: 15%;
   left: 50%;
 }
-/* line 101, ../sass/_page.scss */
+/* line 115, ../sass/_page.scss */
 body #impactOfHunger .body-structure .spot.spot-2 {
   margin-left: -15px;
   top: 45%;
   left: 50%;
 }
-/* line 106, ../sass/_page.scss */
+/* line 120, ../sass/_page.scss */
 body #impactOfHunger .body-structure .spot.spot-3 {
   margin-left: -58px;
   top: 48%;
   left: 50%;
 }
-/* line 111, ../sass/_page.scss */
+/* line 125, ../sass/_page.scss */
 body #impactOfHunger .body-structure .spot.spot-4 {
   margin-left: -90px;
   top: 37%;
   left: 50%;
 }
-/* line 116, ../sass/_page.scss */
+/* line 130, ../sass/_page.scss */
 body #impactOfHunger .body-structure .spot.spot-5 {
   top: 55%;
   left: 77%;
@@ -356,7 +374,7 @@ a.waves-effect .waves-ripple {
 /*
  * Color Definition Sheet
  */
-/* line 7, ../sass/_nativedroid2.color.scss */
+/* line 8, ../sass/_nativedroid2.color.scss */
 .nd2-bg-500 {
   background-color: #000;
   color: #ffffff;
@@ -366,279 +384,368 @@ a.waves-effect .waves-ripple {
  * Custom Styles
  *
  */
-/* line 14, ../sass/_nativedroid2.color.scss */
+/* line 19, ../sass/_nativedroid2.color.scss */
 .ui-page-theme-a .ui-header {
   background-color: #000;
   color: #ffffff;
 }
 
-/* line 19, ../sass/_nativedroid2.color.scss */
+/* line 24, ../sass/_nativedroid2.color.scss */
 .ui-page-theme-a .ui-footer {
   background-color: #ffffff;
   color: #323232;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
 }
 
-/* line 26, ../sass/_nativedroid2.color.scss */
+/* line 30, ../sass/_nativedroid2.color.scss */
 li.ui-tabs-active > .ui-link.ui-btn.ui-tabs-anchor,
 .ui-page-theme-a .ui-btn.clr-primary {
   color: #000;
 }
 
-/* line 31, ../sass/_nativedroid2.color.scss */
-.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a,
-.ui-page-theme-a a:hover, html .ui-bar-a a:hover, html .ui-body-a a:hover, html body .ui-group-theme-a a:hover,
-.ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited {
+/* line 35, ../sass/_nativedroid2.color.scss */
+.ui-page-theme-a a,
+html .ui-bar-a a,
+html .ui-body-a a,
+html body .ui-group-theme-a a,
+.ui-page-theme-a a:hover,
+html .ui-bar-a a:hover,
+html .ui-body-a a:hover,
+html body .ui-group-theme-a a:hover,
+.ui-page-theme-a a:visited,
+html .ui-bar-a a:visited,
+html .ui-body-a a:visited,
+html body .ui-group-theme-a a:visited {
   color: #000;
 }
 
-/* line 37, ../sass/_nativedroid2.color.scss */
+/* line 50, ../sass/_nativedroid2.color.scss */
 .ui-page-theme-a .ui-btn.clr-warning {
   color: #f44336;
 }
 
-/* line 41, ../sass/_nativedroid2.color.scss */
+/* line 54, ../sass/_nativedroid2.color.scss */
 .ui-page-theme-a .ui-btn.ui-btn-raised.clr-primary {
   background-color: #000;
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* line 46, ../sass/_nativedroid2.color.scss */
+/* line 59, ../sass/_nativedroid2.color.scss */
 .ui-page-theme-a .ui-btn.ui-btn-raised.clr-warning {
   background-color: #f44336;
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* line 51, ../sass/_nativedroid2.color.scss */
+/* line 64, ../sass/_nativedroid2.color.scss */
 .ui-page-theme-a .ui-radio .ui-btn.ui-radio-on:before {
   background-color: #000;
 }
 
-/* line 55, ../sass/_nativedroid2.color.scss */
+/* line 68, ../sass/_nativedroid2.color.scss */
 .ui-page-theme-a .ui-btn.ui-radio-on:after {
   border-color: #000;
 }
 
-/* line 59, ../sass/_nativedroid2.color.scss */
+/* line 72, ../sass/_nativedroid2.color.scss */
 html .ui-page-theme-a .ui-btn.ui-checkbox-on.ui-checkbox-on:after {
   background-color: #000;
   border-color: #000;
 }
 
-/* line 64, ../sass/_nativedroid2.color.scss */
+/* line 77, ../sass/_nativedroid2.color.scss */
 .ui-controlgroup-horizontal .ui-controlgroup-controls .ui-btn.ui-checkbox-on,
 .ui-controlgroup-horizontal .ui-controlgroup-controls .ui-btn.ui-radio-on {
-  background-color: #000;
+  background-color: #f44336;
   color: #ffffff;
 }
 
-/* line 70, ../sass/_nativedroid2.color.scss */
+/* line 83, ../sass/_nativedroid2.color.scss */
 .ui-input-text.ui-focus:after,
 .ui-input-search.ui-focus:after {
-  background-color: #000;
-  height: 2px;
+  background-color: #fff;
+  height: 1px;
 }
 
-/* line 76, ../sass/_nativedroid2.color.scss */
+/* line 90, ../sass/_nativedroid2.color.scss */
 textarea.ui-input-text.ui-textinput-autogrow.ui-focus {
   border-bottom: 2px solid #000;
 }
 
-/* line 80, ../sass/_nativedroid2.color.scss */
-.ui-page-theme-a .ui-flipswitch-active, html .ui-bar-a .ui-flipswitch-active, html .ui-body-a .ui-flipswitch-active, html body .ui-group-theme-a .ui-flipswitch-active, html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active {
+/* line 94, ../sass/_nativedroid2.color.scss */
+.ui-page-theme-a .ui-flipswitch-active,
+html .ui-bar-a .ui-flipswitch-active,
+html .ui-body-a .ui-flipswitch-active,
+html body .ui-group-theme-a .ui-flipswitch-active,
+html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active {
   color: #ffffff !important;
   background-color: #000 !important;
 }
 
-/* line 85, ../sass/_nativedroid2.color.scss */
-.ui-page-theme-a .ui-slider-track .ui-btn-active, html .ui-bar-a .ui-slider-track .ui-btn-active, html .ui-body-a .ui-slider-track .ui-btn-active, html body .ui-group-theme-a .ui-slider-track .ui-btn-active, html body div.ui-slider-track.ui-body-a .ui-btn-active,
+/* line 103, ../sass/_nativedroid2.color.scss */
+.ui-page-theme-a .ui-slider-track .ui-btn-active,
+html .ui-bar-a .ui-slider-track .ui-btn-active,
+html .ui-body-a .ui-slider-track .ui-btn-active,
+html body .ui-group-theme-a .ui-slider-track .ui-btn-active,
+html body div.ui-slider-track.ui-body-a .ui-btn-active,
 .ui-slider-track .ui-btn.ui-slider-handle {
   background-color: #000 !important;
 }
 
 /* Chart-Color-Palette: cyan */
 /* --- */
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-a .ct-bar, .nd2-chart .ct-series-a .ct-line, .nd2-chart .ct-series-a .ct-point, .nd2-chart .ct-series-a .ct-slice-donut {
+/* line 118, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-a .ct-bar,
+.nd2-chart .ct-series-a .ct-line,
+.nd2-chart .ct-series-a .ct-point,
+.nd2-chart .ct-series-a .ct-slice-donut {
   stroke: #000;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-a .ct-area, .nd2-chart .ct-series-a .ct-slice-pie {
+/* line 125, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-a .ct-area,
+.nd2-chart .ct-series-a .ct-slice-pie {
   fill: #000;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-b .ct-bar, .nd2-chart .ct-series-b .ct-line, .nd2-chart .ct-series-b .ct-point, .nd2-chart .ct-series-b .ct-slice-donut {
+/* line 130, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-b .ct-bar,
+.nd2-chart .ct-series-b .ct-line,
+.nd2-chart .ct-series-b .ct-point,
+.nd2-chart .ct-series-b .ct-slice-donut {
   stroke: #009688;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-b .ct-area, .nd2-chart .ct-series-b .ct-slice-pie {
+/* line 137, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-b .ct-area,
+.nd2-chart .ct-series-b .ct-slice-pie {
   fill: #009688;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-c .ct-bar, .nd2-chart .ct-series-c .ct-line, .nd2-chart .ct-series-c .ct-point, .nd2-chart .ct-series-c .ct-slice-donut {
+/* line 142, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-c .ct-bar,
+.nd2-chart .ct-series-c .ct-line,
+.nd2-chart .ct-series-c .ct-point,
+.nd2-chart .ct-series-c .ct-slice-donut {
   stroke: #4CAF50;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-c .ct-area, .nd2-chart .ct-series-c .ct-slice-pie {
+/* line 149, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-c .ct-area,
+.nd2-chart .ct-series-c .ct-slice-pie {
   fill: #4CAF50;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-d .ct-bar, .nd2-chart .ct-series-d .ct-line, .nd2-chart .ct-series-d .ct-point, .nd2-chart .ct-series-d .ct-slice-donut {
+/* line 154, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-d .ct-bar,
+.nd2-chart .ct-series-d .ct-line,
+.nd2-chart .ct-series-d .ct-point,
+.nd2-chart .ct-series-d .ct-slice-donut {
   stroke: #8BC34A;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-d .ct-area, .nd2-chart .ct-series-d .ct-slice-pie {
+/* line 161, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-d .ct-area,
+.nd2-chart .ct-series-d .ct-slice-pie {
   fill: #8BC34A;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-e .ct-bar, .nd2-chart .ct-series-e .ct-line, .nd2-chart .ct-series-e .ct-point, .nd2-chart .ct-series-e .ct-slice-donut {
+/* line 166, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-e .ct-bar,
+.nd2-chart .ct-series-e .ct-line,
+.nd2-chart .ct-series-e .ct-point,
+.nd2-chart .ct-series-e .ct-slice-donut {
   stroke: #CDDC39;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-e .ct-area, .nd2-chart .ct-series-e .ct-slice-pie {
+/* line 173, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-e .ct-area,
+.nd2-chart .ct-series-e .ct-slice-pie {
   fill: #CDDC39;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-f .ct-bar, .nd2-chart .ct-series-f .ct-line, .nd2-chart .ct-series-f .ct-point, .nd2-chart .ct-series-f .ct-slice-donut {
+/* line 178, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-f .ct-bar,
+.nd2-chart .ct-series-f .ct-line,
+.nd2-chart .ct-series-f .ct-point,
+.nd2-chart .ct-series-f .ct-slice-donut {
   stroke: #FFEB3B;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-f .ct-area, .nd2-chart .ct-series-f .ct-slice-pie {
+/* line 185, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-f .ct-area,
+.nd2-chart .ct-series-f .ct-slice-pie {
   fill: #FFEB3B;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-g .ct-bar, .nd2-chart .ct-series-g .ct-line, .nd2-chart .ct-series-g .ct-point, .nd2-chart .ct-series-g .ct-slice-donut {
+/* line 190, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-g .ct-bar,
+.nd2-chart .ct-series-g .ct-line,
+.nd2-chart .ct-series-g .ct-point,
+.nd2-chart .ct-series-g .ct-slice-donut {
   stroke: #FFC107;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-g .ct-area, .nd2-chart .ct-series-g .ct-slice-pie {
+/* line 197, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-g .ct-area,
+.nd2-chart .ct-series-g .ct-slice-pie {
   fill: #FFC107;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-h .ct-bar, .nd2-chart .ct-series-h .ct-line, .nd2-chart .ct-series-h .ct-point, .nd2-chart .ct-series-h .ct-slice-donut {
+/* line 202, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-h .ct-bar,
+.nd2-chart .ct-series-h .ct-line,
+.nd2-chart .ct-series-h .ct-point,
+.nd2-chart .ct-series-h .ct-slice-donut {
   stroke: #FF9800;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-h .ct-area, .nd2-chart .ct-series-h .ct-slice-pie {
+/* line 209, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-h .ct-area,
+.nd2-chart .ct-series-h .ct-slice-pie {
   fill: #FF9800;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-i .ct-bar, .nd2-chart .ct-series-i .ct-line, .nd2-chart .ct-series-i .ct-point, .nd2-chart .ct-series-i .ct-slice-donut {
+/* line 214, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-i .ct-bar,
+.nd2-chart .ct-series-i .ct-line,
+.nd2-chart .ct-series-i .ct-point,
+.nd2-chart .ct-series-i .ct-slice-donut {
   stroke: #FF5722;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-i .ct-area, .nd2-chart .ct-series-i .ct-slice-pie {
+/* line 221, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-i .ct-area,
+.nd2-chart .ct-series-i .ct-slice-pie {
   fill: #FF5722;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-j .ct-bar, .nd2-chart .ct-series-j .ct-line, .nd2-chart .ct-series-j .ct-point, .nd2-chart .ct-series-j .ct-slice-donut {
+/* line 226, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-j .ct-bar,
+.nd2-chart .ct-series-j .ct-line,
+.nd2-chart .ct-series-j .ct-point,
+.nd2-chart .ct-series-j .ct-slice-donut {
   stroke: #795548;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-j .ct-area, .nd2-chart .ct-series-j .ct-slice-pie {
+/* line 233, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-j .ct-area,
+.nd2-chart .ct-series-j .ct-slice-pie {
   fill: #795548;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-k .ct-bar, .nd2-chart .ct-series-k .ct-line, .nd2-chart .ct-series-k .ct-point, .nd2-chart .ct-series-k .ct-slice-donut {
+/* line 238, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-k .ct-bar,
+.nd2-chart .ct-series-k .ct-line,
+.nd2-chart .ct-series-k .ct-point,
+.nd2-chart .ct-series-k .ct-slice-donut {
   stroke: #9E9E9E;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-k .ct-area, .nd2-chart .ct-series-k .ct-slice-pie {
+/* line 245, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-k .ct-area,
+.nd2-chart .ct-series-k .ct-slice-pie {
   fill: #9E9E9E;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-l .ct-bar, .nd2-chart .ct-series-l .ct-line, .nd2-chart .ct-series-l .ct-point, .nd2-chart .ct-series-l .ct-slice-donut {
+/* line 250, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-l .ct-bar,
+.nd2-chart .ct-series-l .ct-line,
+.nd2-chart .ct-series-l .ct-point,
+.nd2-chart .ct-series-l .ct-slice-donut {
   stroke: #607D8B;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-l .ct-area, .nd2-chart .ct-series-l .ct-slice-pie {
+/* line 257, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-l .ct-area,
+.nd2-chart .ct-series-l .ct-slice-pie {
   fill: #607D8B;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-m .ct-bar, .nd2-chart .ct-series-m .ct-line, .nd2-chart .ct-series-m .ct-point, .nd2-chart .ct-series-m .ct-slice-donut {
+/* line 262, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-m .ct-bar,
+.nd2-chart .ct-series-m .ct-line,
+.nd2-chart .ct-series-m .ct-point,
+.nd2-chart .ct-series-m .ct-slice-donut {
   stroke: #F44336;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-m .ct-area, .nd2-chart .ct-series-m .ct-slice-pie {
+/* line 269, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-m .ct-area,
+.nd2-chart .ct-series-m .ct-slice-pie {
   fill: #F44336;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-n .ct-bar, .nd2-chart .ct-series-n .ct-line, .nd2-chart .ct-series-n .ct-point, .nd2-chart .ct-series-n .ct-slice-donut {
+/* line 274, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-n .ct-bar,
+.nd2-chart .ct-series-n .ct-line,
+.nd2-chart .ct-series-n .ct-point,
+.nd2-chart .ct-series-n .ct-slice-donut {
   stroke: #E91E63;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-n .ct-area, .nd2-chart .ct-series-n .ct-slice-pie {
+/* line 281, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-n .ct-area,
+.nd2-chart .ct-series-n .ct-slice-pie {
   fill: #E91E63;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-o .ct-bar, .nd2-chart .ct-series-o .ct-line, .nd2-chart .ct-series-o .ct-point, .nd2-chart .ct-series-o .ct-slice-donut {
+/* line 286, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-o .ct-bar,
+.nd2-chart .ct-series-o .ct-line,
+.nd2-chart .ct-series-o .ct-point,
+.nd2-chart .ct-series-o .ct-slice-donut {
   stroke: #9C27B0;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-o .ct-area, .nd2-chart .ct-series-o .ct-slice-pie {
+/* line 293, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-o .ct-area,
+.nd2-chart .ct-series-o .ct-slice-pie {
   fill: #9C27B0;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-p .ct-bar, .nd2-chart .ct-series-p .ct-line, .nd2-chart .ct-series-p .ct-point, .nd2-chart .ct-series-p .ct-slice-donut {
+/* line 298, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-p .ct-bar,
+.nd2-chart .ct-series-p .ct-line,
+.nd2-chart .ct-series-p .ct-point,
+.nd2-chart .ct-series-p .ct-slice-donut {
   stroke: #673AB7;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-p .ct-area, .nd2-chart .ct-series-p .ct-slice-pie {
+/* line 305, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-p .ct-area,
+.nd2-chart .ct-series-p .ct-slice-pie {
   fill: #673AB7;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-q .ct-bar, .nd2-chart .ct-series-q .ct-line, .nd2-chart .ct-series-q .ct-point, .nd2-chart .ct-series-q .ct-slice-donut {
+/* line 310, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-q .ct-bar,
+.nd2-chart .ct-series-q .ct-line,
+.nd2-chart .ct-series-q .ct-point,
+.nd2-chart .ct-series-q .ct-slice-donut {
   stroke: #3F51B5;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-q .ct-area, .nd2-chart .ct-series-q .ct-slice-pie {
+/* line 317, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-q .ct-area,
+.nd2-chart .ct-series-q .ct-slice-pie {
   fill: #3F51B5;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-r .ct-bar, .nd2-chart .ct-series-r .ct-line, .nd2-chart .ct-series-r .ct-point, .nd2-chart .ct-series-r .ct-slice-donut {
+/* line 322, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-r .ct-bar,
+.nd2-chart .ct-series-r .ct-line,
+.nd2-chart .ct-series-r .ct-point,
+.nd2-chart .ct-series-r .ct-slice-donut {
   stroke: #2196F3;
 }
 
-/* line 92, ../sass/_nativedroid2.color.scss */
-.nd2-chart .ct-series-r .ct-area, .nd2-chart .ct-series-r .ct-slice-pie {
+/* line 329, ../sass/_nativedroid2.color.scss */
+.nd2-chart .ct-series-r .ct-area,
+.nd2-chart .ct-series-r .ct-slice-pie {
   fill: #2196F3;
 }
 
-/* line 1, ../sass/_nativedroid2.scss */
+/* line 3, ../sass/_nativedroid2.scss */
 .ui-page-theme-a .ui-btn,
 html .ui-bar-a .ui-btn,
 html .ui-body-a .ui-btn,
@@ -674,60 +781,127 @@ html body div.ui-slider-track.ui-body-a .ui-btn-active {
   border-radius: 0;
 }
 
-/* line 36, ../sass/_nativedroid2.scss */
+/* line 38, ../sass/_nativedroid2.scss */
 .ui-content .ui-collapsible .ui-btn-icon-left {
   padding-left: 2.5em;
 }
-/* line 39, ../sass/_nativedroid2.scss */
+/* line 41, ../sass/_nativedroid2.scss */
 .ui-content .ui-collapsible .waves-effect.ui-btn {
   text-align: left;
   display: block;
 }
-/* line 43, ../sass/_nativedroid2.scss */
+/* line 45, ../sass/_nativedroid2.scss */
 .ui-content .ui-collapsible:not(.ui-collapsible-collapsed) {
   background-color: #333;
 }
-/* line 45, ../sass/_nativedroid2.scss */
+/* line 47, ../sass/_nativedroid2.scss */
 .ui-content .ui-collapsible:not(.ui-collapsible-collapsed) a.ui-collapsible-heading-toggle {
   color: #fff;
   background-color: #333;
 }
-/* line 50, ../sass/_nativedroid2.scss */
+/* line 52, ../sass/_nativedroid2.scss */
 .ui-content .ui-collapsible.ui-collapsible-collapsed {
   background-color: #222;
 }
-/* line 57, ../sass/_nativedroid2.scss */
+/* line 59, ../sass/_nativedroid2.scss */
 .ui-content hr {
   border-top: 1px solid #333;
 }
-/* line 60, ../sass/_nativedroid2.scss */
+/* line 62, ../sass/_nativedroid2.scss */
 .ui-content .nd2Tabs-content-tab {
   width: 100%;
   box-sizing: border-box;
 }
 
-/* line 66, ../sass/_nativedroid2.scss */
-.nd2-sidepanel-profile {
-  padding: 1.5em 1em;
-  background: #222;
+/* line 70, ../sass/_nativedroid2.scss */
+.ui-controlgroup-horizontal .ui-controlgroup-label legend {
+  margin-bottom: 5px;
 }
-/* line 69, ../sass/_nativedroid2.scss */
+/* line 75, ../sass/_nativedroid2.scss */
+.ui-controlgroup-horizontal .ui-controlgroup-controls .ui-btn {
+  background-color: #666;
+}
+
+/* line 81, ../sass/_nativedroid2.scss */
+.ui-mobile label,
+.ui-controlgroup-label,
+.ui-controlgroup-label legend {
+  color: #fff;
+}
+
+/* line 87, ../sass/_nativedroid2.scss */
+.ui-input-text {
+  background: none !important;
+}
+/* line 89, ../sass/_nativedroid2.scss */
+.ui-input-text input {
+  color: #fff;
+  text-shadow: rgba(0, 0, 255, 0) 0 0 0;
+}
+/* line 61, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.ui-input-text input:-moz-placeholder {
+  color: #666;
+}
+/* line 64, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.ui-input-text input::-moz-placeholder {
+  color: #666;
+}
+/* line 67, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.ui-input-text input:-ms-input-placeholder {
+  color: #666;
+}
+/* line 56, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.ui-input-text input::-webkit-input-placeholder {
+  color: #666;
+}
+/* line 96, ../sass/_nativedroid2.scss */
+.ui-input-text:after {
+  background-color: #666;
+}
+/* line 100, ../sass/_nativedroid2.scss */
+.ui-input-text.error:after {
+  background-color: #f44336;
+}
+
+/* line 106, ../sass/_nativedroid2.scss */
+.ui-btn,
+a.ui-btn {
+  text-transform: capitalize;
+}
+
+/* line 111, ../sass/_nativedroid2.scss */
+.nd2-sidepanel-profile {
+  padding: 1.5em 1em 1.2em;
+  margin-top: .5em;
+  background: #eee;
+}
+/* line 115, ../sass/_nativedroid2.scss */
 .nd2-sidepanel-profile .profile-thumbnail {
   margin: -0.5em auto;
 }
-/* line 72, ../sass/_nativedroid2.scss */
+/* line 119, ../sass/_nativedroid2.scss */
+.nd2-sidepanel-profile .profile-text strong {
+  color: #444;
+  text-transform: uppercase;
+}
+/* line 124, ../sass/_nativedroid2.scss */
 .nd2-sidepanel-profile .fb-logout {
   margin-top: .5em;
   padding: .5em 1em;
 }
-
-/* line 80, ../sass/_nativedroid2.scss */
-.ui-controlgroup-horizontal .ui-controlgroup-label legend {
-  margin-bottom: 5px;
+/* line 128, ../sass/_nativedroid2.scss */
+.nd2-sidepanel-profile .zmdi {
+  margin: .3em .5em 0 0;
 }
-/* line 85, ../sass/_nativedroid2.scss */
-.ui-controlgroup-horizontal .ui-controlgroup-controls .ui-btn {
-  background-color: #666;
+/* line 130, ../sass/_nativedroid2.scss */
+.nd2-sidepanel-profile .zmdi:hover, .nd2-sidepanel-profile .zmdi:visited {
+  text-decoration: none;
+}
+/* line 135, ../sass/_nativedroid2.scss */
+.nd2-sidepanel-profile .ui-btn {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 /* line 1, ../sass/_swiper.scss */
@@ -788,4 +962,193 @@ html body div.ui-slider-track.ui-body-a .ui-btn-active {
   background-size: cover;
   width: 300px;
   height: 300px;
+}
+
+/* line 20, ../sass/_RYPP.scss */
+.RYPP {
+  /* Youtube Player With Playlist */
+  width: 100%;
+  position: relative;
+  padding-right: 250px;
+  background: #1a1a1a;
+  overflow: hidden;
+  font: 400 14px/120% Arial, Helvetica, sans-serif;
+  color: #999;
+}
+/* line 31, ../sass/_RYPP.scss */
+.RYPP .RYPP-video {
+  width: 100%;
+  padding-top: 56.25%;
+  float: left;
+  position: relative;
+}
+/* line 37, ../sass/_RYPP.scss */
+.RYPP .RYPP-video > iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+/* line 48, ../sass/_RYPP.scss */
+.RYPP.r16-9 .RYPP-video {
+  padding-top: 56.25%;
+}
+/* line 54, ../sass/_RYPP.scss */
+.RYPP.r4-3 .RYPP-video {
+  padding-top: 75%;
+}
+/* line 60, ../sass/_RYPP.scss */
+.RYPP.r2-1 .RYPP-video {
+  padding-top: 50%;
+}
+/* line 65, ../sass/_RYPP.scss */
+.RYPP .RYPP-items {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 64px;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+/* line 76, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist {
+  width: 250px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #222;
+}
+/* line 83, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist a {
+  color: #999;
+}
+/* line 85, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist a:hover {
+  color: #fff;
+}
+/* line 89, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist > header {
+  width: 100%;
+  height: 64px;
+  padding: 16px 0 0 8px;
+  background: #222;
+  border-left: 8px solid #222;
+  border-right: 8px solid #222;
+  border-bottom: 1px solid #3a3a3a;
+  z-index: 2;
+}
+/* line 99, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist > header ._h1 {
+  margin: 0 0 4px 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+/* line 107, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist > header p {
+  margin: 0;
+  padding: 0;
+}
+/* line 112, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist ol {
+  padding: 0 0 16px 0;
+  margin: 0;
+  list-style: none;
+  counter-reset: item;
+}
+/* line 118, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist ol li {
+  position: relative;
+  vertical-align: middle;
+  overflow: hidden;
+  padding: 12px 0 12px 12px;
+}
+/* line 124, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist ol li > img {
+  width: 18%;
+  display: inline-block;
+  vertical-align: middle;
+  border: 2px solid transparent;
+}
+/* line 130, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist ol li > p {
+  width: 76%;
+  margin: 0;
+  padding: 0 0 0 0;
+  float: right;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  color: #cacaca;
+}
+/* line 140, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist ol li > p > small {
+  margin: 0;
+  padding: 0;
+  font-size: 80%;
+}
+/* line 146, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist ol li:hover {
+  background-color: #3a3a3a;
+  cursor: pointer;
+}
+/* line 150, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist ol li.selected {
+  background-color: #3a3a3a;
+  cursor: pointer;
+}
+/* line 153, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist ol li.selected > p {
+  color: #fff;
+}
+/* line 156, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist ol li.selected > img {
+  border: 2px solid #c03636;
+}
+/* line 159, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist ol li.selected:before {
+  content: '▶';
+  font-size: 10px;
+  color: #c03636;
+}
+/* line 165, ../sass/_RYPP.scss */
+.RYPP .RYPP-playlist ol li:before {
+  counter-increment: item;
+  content: counter(item);
+  font-size: 80%;
+}
+
+/* line 176, ../sass/_RYPP.scss */
+.RYPP-items::-webkit-scrollbar {
+  width: 6px;
+  background: #3a3a3a;
+}
+
+/* line 180, ../sass/_RYPP.scss */
+.RYPP-items::-webkit-scrollbar-thumb {
+  background: #999;
+}
+
+@media only screen and (max-width: 639px) {
+  /* line 186, ../sass/_RYPP.scss */
+  .RYPP {
+    padding-right: 0;
+  }
+  /* line 188, ../sass/_RYPP.scss */
+  .RYPP .RYPP-playlist {
+    width: 100%;
+    position: static;
+    float: left;
+  }
+  /* line 192, ../sass/_RYPP.scss */
+  .RYPP .RYPP-playlist .RYPP-items {
+    position: static;
+    max-height: 350px;
+    overflow: auto;
+  }
 }

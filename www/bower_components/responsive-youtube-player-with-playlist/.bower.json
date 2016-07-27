@@ -1,0 +1,14 @@
+{
+  "name": "responsive-youtube-player-with-playlist",
+  "homepage": "https://github.com/carloscabo/responsive-youtube-player-with-playlist",
+  "_release": "0a96063e66",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "0a96063e662c95206cbbaac2b95f92b25a38b056"
+  },
+  "_source": "git://github.com/carloscabo/responsive-youtube-player-with-playlist.git",
+  "_target": "*",
+  "_originalSource": "carloscabo/responsive-youtube-player-with-playlist",
+  "_direct": true
+}

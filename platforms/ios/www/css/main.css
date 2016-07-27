@@ -730,6 +730,15 @@ html body div.ui-slider-track.ui-body-a .ui-btn-active {
   background-color: #666;
 }
 
+/* line 90, ../sass/_nativedroid2.scss */
+.ui-input-text {
+  background: none !important;
+}
+/* line 92, ../sass/_nativedroid2.scss */
+.ui-input-text input {
+  text-shadow: rgba(0, 0, 255, 0) 0 0 0;
+}
+
 /* line 1, ../sass/_swiper.scss */
 .swiper-container {
   width: 100%;
