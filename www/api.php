@@ -5,18 +5,28 @@
 
 	require 'vendor/autoload.php';
 
-	
+	//development
 	function getConnection() {
 	    $dbhost="127.0.0.1";
 	    $dbuser="root";
 	    $dbpass="";
 	    $dbname="305cde";
-	    $tbmember="personal";
 	    $dbh = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
 	    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	    return $dbh;
 	}
 
+	//production
+	// function getConnection() {
+	//     $dbhost="localhost";
+	//     $dbuser="louisla1__vtc";
+	//     $dbpass="Fv3NN]?ErAT{";
+	//     $dbname="louisla1_vtc_mordern_web";
+	//     $tbmember="members";
+	//     $dbh = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
+	//     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	//     return $dbh;
+	// }
 	$configuration = [
 	    'settings' => [
 	        'displayErrorDetails' => true,
@@ -31,28 +41,23 @@
 	    getUser($args['userdata']);
 	});
 	$app->post('/register', function($request, $response, $args) {
-	    register($request->getBody());//Request object’s <code>getParsedBody()</code> method to parse the HTTP request 
+	    register($request->getBody());
 	});
 	$app->post('/login', function($request, $response, $args) {
-	    login($request->getBody());//Request object’s <code>getParsedBody()</code> method to parse the HTTP request 
+	    login($request->getBody());
 	});
 	$app->post('/rpassword', function($request, $response, $args) {
-	    resetPassword($request->getBody());//Request object’s <code>getParsedBody()</code> method to parse the HTTP request 
+	    resetPassword($request->getBody());
 	});
 	$app->post('/update', function($request, $response, $args) {
-	    update($request->getBody());//Request object’s <code>getParsedBody()</code> method to parse the HTTP request 
+	    update($request->getBody());
 	});
-	// $app->put('/update_employee', function($request, $response, $args) {
-	//     update_employee($request->getParsedBody());
-	// });
-	// $app->delete('/delete_employee', function($request, $response, $args) {
-	//     delete_employee($request->getParsedBody());
-	// });
+
 	$app->run();
 
 	 
 	function getAllUsers() {
-	    $sql = "SELECT * FROM personal ORDER BY id";
+	    $sql = "SELECT * FROM members ORDER BY id";
 	    try {
 	        $db = getConnection();
 	        $stmt = $db->prepare($sql);
@@ -60,25 +65,31 @@
 	        // $users = $stmt->fetchObject();
 	        $users = $stmt->fetchAll(PDO::FETCH_OBJ);
 	        $db = null;
-	        echo json_encode($users);
+	        $response['status'] = 'success';
+					// $response['title'] = 'Login success';
+					// $response['message'] = 'Login successfully';
+					$response['users'] = $users;
+		    	echo json_encode($response);
 	    } catch(PDOException $e) {
 	        echo '{"error":{"text":'. $e->getMessage() .'}}';
 	    }
 	}
 
 	function getUser($userdata) {
-		$sql = "SELECT * FROM personal WHERE `id` = '$userdata' OR `username` = '$userdata' OR `email` = '$userdata'";
+		$sql = "SELECT * FROM members WHERE `id` = '$userdata' OR `username` = '$userdata' OR `email` = '$userdata'";
 	    	$db = getConnection();
 		    $stmt = $db->prepare($sql);
 		    $stmt->execute();
 		    $user = $stmt->fetchAll(PDO::FETCH_OBJ);
 		    $db = null;
 		    if($user){
-		    	echo json_encode($user);
+					$response['status'] = 'success';
+					$response['user'] = $user;
+		    	echo json_encode($response);
 		    }else{
 		    	$response['status'] = 'error';
 		    	$response['message'] = 'User does not exist';
-	            echo json_encode($response);;
+          echo json_encode($response);;
 		    }
 	}
 
@@ -89,7 +100,7 @@
 	    // var_dumb($user);
 
 	    $db = getConnection();
-	    $checkUser = $db->prepare('SELECT * FROM personal WHERE username=:username AND password=:password');
+	    $checkUser = $db->prepare('SELECT * FROM members WHERE username=:username AND password=:password');
 		$checkUser->bindParam("username", $user->username);
         $checkUser->bindParam("password", $user->password);
   		$checkUser->execute();
@@ -114,7 +125,7 @@
 
 	    $db = getConnection();
 	    // $checkUser = $db->prepare('SELECT * FROM personal WHERE username=:username AND password=:password');
-	    $updatePassword = $db->prepare('UPDATE personal SET username=:nusername, email=:email, gender=:gender WHERE username=:ousername AND password=:password');
+	    $updatePassword = $db->prepare('UPDATE members SET username=:nusername, email=:email, gender=:gender WHERE username=:ousername AND password=:password');
 		$updatePassword->bindParam("nusername", $user->nusername);
 		$updatePassword->bindParam("ousername", $user->ousername);
         $updatePassword->bindParam("email", $user->email);
@@ -141,7 +152,7 @@
 
 	    $db = getConnection();
 	    // $checkUser = $db->prepare('SELECT * FROM personal WHERE username=:username AND password=:password');
-	    $updatePassword = $db->prepare('UPDATE personal SET password=:npassword WHERE username=:username AND password=:opassword');
+	    $updatePassword = $db->prepare('UPDATE members SET password=:npassword WHERE username=:username AND password=:opassword');
 		$updatePassword->bindParam("username", $user->username);
         $updatePassword->bindParam("npassword", $user->npassword);
         $updatePassword->bindParam("opassword", $user->opassword);
@@ -165,7 +176,7 @@
 	    // var_dumb($user);
 
 	    $db = getConnection();
-	    $checkUser = $db->prepare('SELECT * FROM personal WHERE email=:email');
+	    $checkUser = $db->prepare('SELECT * FROM members WHERE email=:email');
   		$checkUser->bindParam("email", $user->email);
   		$checkUser->execute();
 
@@ -174,7 +185,7 @@
 			$response['title'] = 'Registration Fail';
 			$response['message'] = 'This email is used for registration.<br/>Please go to login page or try another email.';
 		}else{
-			$createUser = $db->prepare('INSERT INTO personal(username,email,gender,password) VALUES(:username, :email, :gender, :password)');
+			$createUser = $db->prepare('INSERT INTO members(username,email,gender,password) VALUES(:username, :email, :gender, :password)');
 			$createUser->bindParam("username", $user->username);
 	        $createUser->bindParam("email", $user->email);
 	        $createUser->bindParam("gender", $user->gender);

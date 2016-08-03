@@ -1,7 +1,8 @@
 <!--
   panel left
 -->
-<script src="bower_components/openfb/openfb.js">
+<!--script src="bower_components/openfb/openfb.js"-->
+<script src="bower_components/jquery.fblogin/dist/jquery.fblogin.min.js">
 </script>
 <div data-display="overlay" data-position-fixed="true" data-role="panel" id="leftpanel">
   <ul class="pre-login" data-icon="false" data-role="listview">
@@ -83,6 +84,11 @@
         Bengal Famine Of 1943
       </a>
     </li>
+    <li>
+      <a href="hunger-world.html" data-ajax="false">
+        Africa Hunger Crisis
+      </a>
+    </li>
   </ul>
   <!-- <hr class="inset"/>
   <ul data-icon="false" data-role="listview">
@@ -97,6 +103,23 @@
   </ul> -->
 </div>
 <!-- /panel left -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '126062877835153',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 <script type="text/javascript">
     // document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -113,6 +136,7 @@ var userPic = window.localStorage.getItem("userPic");
 if(login != undefined){
     if (fbToken != undefined) {
         $('.pre-login').hide();
+        $('.nd2-sidepanel-profile .zmdi-settings').parent('a').hide();
         $('.profile-thumbnail').attr('src', fbPic);
         $('.profile-name').html(fbName);
         $('.post-login').show();
@@ -135,25 +159,14 @@ openFB.init({
 
 
 function logout() {
-    if (fbToken != undefined) {
-        openFB.logout(
-            function() {
-                window.localStorage.clear();
-                // alert('Logout successful');
-                $('.post-login').hide();
-                $('.pre-login').show();
-            },
-            errorHandler);
-    }else{
-        window.localStorage.removeItem("login");
-        $.mobile.changePage('logout-success.html', {
-            allowSamePageTransition: true,
-            transition: 'none',
-            reloadPage: true
-        });
-        $('.post-login').hide();
-        $('.pre-login').show();
-    }
+    window.localStorage.clear();
+    $.mobile.changePage('logout-success.html', {
+        allowSamePageTransition: true,
+        transition: 'none',
+        reloadPage: true
+    });
+    $('.post-login').hide();
+    $('.pre-login').show();
 }
 
 function errorHandler(error) {

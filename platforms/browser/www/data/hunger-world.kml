@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Untitled layer</name>
+		<Placemark>
+			<name>Afghanistan</name>
+			<description><![CDATA[Wheat harvest expected to decline by 1 million tons due to extended drought.]]></description>
+			<styleUrl>#icon-22</styleUrl>
+			<Point>
+				<coordinates>66.005859,33.797409,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bolivia</name>
+			<description><![CDATA[Violent conflicts over food and energy production cause 30 people to die.]]></description>
+			<styleUrl>#icon-22</styleUrl>
+			<Point>
+				<coordinates>-64.775391,-16.804541,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Haiti</name>
+			<description><![CDATA[Severe storms in September kill 300; millions at risk of sever hunger. In April , food riots kill 5.]]></description>
+			<styleUrl>#icon-22</styleUrl>
+			<Point>
+				<coordinates>-72.641602,18.958246,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Chad</name>
+			<description><![CDATA[Malnutrition worsens for 24,000 Sudanese refugees on eastern border.]]></description>
+			<styleUrl>#icon-22</styleUrl>
+			<Point>
+				<coordinates>18.808594,15.114553000000003,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Moldova</name>
+			<description><![CDATA[Worst drought in 60 years devastates local formers; 135,000 people receive aid.]]></description>
+			<styleUrl>#icon-22</styleUrl>
+			<Point>
+				<coordinates>28.498535,47.502359,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>North Korea</name>
+			<description><![CDATA[$500 million in food aid needed due to drought and poor harvests.]]></description>
+			<styleUrl>#icon-22</styleUrl>
+			<Point>
+				<coordinates>127.177734,40.162083,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Myanmar</name>
+			<description><![CDATA[Cyclone in May leaves 130,000 dead or missing. Agencies fly in 4,000 tons of cargo.]]></description>
+			<styleUrl>#icon-22</styleUrl>
+			<Point>
+				<coordinates>96.328125,21.289374,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bangladesh</name>
+			<description><![CDATA[Heavy monsoons trigger extensive flooding, leaving 400,000 homless.]]></description>
+			<styleUrl>#icon-22</styleUrl>
+			<Point>
+				<coordinates>90.087891,24.146754,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Sri Lanka</name>
+			<description><![CDATA[160,000 need emergency food aid due to new conflict with Tamil rebels in the north.]]></description>
+			<styleUrl>#icon-22</styleUrl>
+			<Point>
+				<coordinates>80.749512,7.514981,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Zimbabwe</name>
+			<description><![CDATA[Ongoing political crisis triggers food price spikes and cholera outbreak.]]></description>
+			<styleUrl>#icon-22</styleUrl>
+			<Point>
+				<coordinates>29.838867,-19.186678,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Ethiopia</name>
+			<description><![CDATA[UN delivers 197,000 metric tons of food to stop starvation due to widespread drought.]]></description>
+			<styleUrl>#icon-22</styleUrl>
+			<Point>
+				<coordinates>39.594727,8.537565,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Style id='icon-22-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-22-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-22'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-22-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-22-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>

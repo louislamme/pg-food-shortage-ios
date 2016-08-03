@@ -1,64 +1,153 @@
-<!-- panel left -->
-<script src="bower_components/openfb/openfb.js"></script>
-<div data-role="panel" id="leftpanel" data-display="overlay" data-position-fixed="true">
-    <ul class="pre-login" data-role="listview" data-icon="false">
-        <li data-role="list-divider">Account</li>
-        <li><a href="membership.html"><i class="zmdi zmdi-sign-in zmd-fw"></i> Register / Login</a></li>
-    </ul>
-    <hr class="inset">
-    <div class='nd2-sidepanel-profile wow fadeInDown post-login'>
-        <div class="row">
-            <div class='col-xs-4 center-xs'>
-                <div class='box'>
-                    <img class="profile-thumbnail" src="//lorempixel.com/200/200/people/9/" />
-                </div>
-            </div>
-            <div class='col-xs-8'>
-                <div class='box profile-text'>
-                    <strong class="profile-name">Username</strong>
-                    <a class='fb-logout ui-btn ui-mini ui-btn-inline ui-btn-raised clr-warning' onclick='logout()'>Logout</a>
-                </div>
-            </div>
+<!--
+  panel left
+-->
+<!--script src="bower_components/openfb/openfb.js"-->
+<script src="bower_components/jquery.fblogin/dist/jquery.fblogin.min.js">
+</script>
+<div data-display="overlay" data-position-fixed="true" data-role="panel" id="leftpanel">
+  <ul class="pre-login" data-icon="false" data-role="listview">
+    <li data-role="list-divider">
+      Account
+    </li>
+    <li>
+      <a href="membership.html" data-ajax="false">
+        <i class="zmdi zmdi-sign-in zmd-fw"></i>
+        Register / Login
+      </a>
+    </li>
+  </ul>
+  <!-- <hr class="inset"/> -->
+  <div class="nd2-sidepanel-profile wow fadeInDown post-login">
+    <div class="row">
+      <div class="col-xs-4 center-xs">
+        <div class="box">
+          <img class="profile-thumbnail" src="//lorempixel.com/200/200/people/9/"/>
         </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="box profile-text">
+          <strong class="profile-name">
+            Username
+          </strong>
+          <a class="fb-logout ui-btn ui-mini ui-btn-inline ui-btn-raised clr-warning" onclick="logout()">
+            Logout
+          </a>
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <a href="setting.html" data-ajax="false">
+          <i class="zmdi zmdi-settings zmd-fw zmdi-hc-2x"></i>
+        </a>
+      </div>
     </div>
-    <ul data-role="listview" data-icon="false">
-        <li><a href="index.html">Home</a></li>
-    </ul>
-    <hr class="inset">
-    <ul data-role="listview" data-icon="false">
-        <li data-role="list-divider">Understandng Of Hunger</li>
-        <li><a href="definition-of-hunger.html">Definition Of Hunger</a></li>
-        <li><a href="muac-tape.html">MUAC Tape</a></li>
-        <li><a href="cause-of-hunger.html">Causes Of Hunger</a></li>
-        <li><a href="impact-of-hunger.html">Impact Of Hunger</a></li>
-    </ul>
-    <hr class="inset">
-    <ul data-role="listview" data-icon="false">
-        <li data-role="list-divider">Case Study</li>
-        <li><a href="case-study.html">Bengal Famine Of 1943</a></li>
-    </ul>
-    <hr class="inset">
-    <ul data-role="listview" data-icon="false">
-        <li data-role="list-divider">How Can We Help?</li>
-        <li><a href="child-sponsorship.html">Child Sponsorship</a></li>
-    </ul>
+  </div>
+  <ul data-icon="false" data-role="listview">
+    <li>
+      <a href="index.html" data-ajax="false">
+        Home
+      </a>
+    </li>
+  </ul>
+  <hr class="inset"/>
+  <ul data-icon="false" data-role="listview">
+    <li data-role="list-divider">
+      Understandng Of Hunger
+    </li>
+    <li>
+      <a href="definition-of-hunger.html" data-ajax="false">
+        Definition Of Hunger
+      </a>
+    </li>
+    <li>
+      <a href="muac-tape.html" data-ajax="false">
+        MUAC Tape
+      </a>
+    </li>
+    <li>
+      <a href="cause-of-hunger.html" data-ajax="false">
+        Causes Of Hunger
+      </a>
+    </li>
+    <li>
+      <a href="impact-of-hunger.html" data-ajax="false">
+        Impact Of Hunger
+      </a>
+    </li>
+  </ul>
+  <hr class="inset"/>
+  <ul data-icon="false" data-role="listview">
+    <li data-role="list-divider">
+      Case Study
+    </li>
+    <li>
+      <a href="case-study.html" data-ajax="false">
+        Bengal Famine Of 1943
+      </a>
+    </li>
+    <li>
+      <a href="hunger-world.html" data-ajax="false">
+        Africa Hunger Crisis
+      </a>
+    </li>
+  </ul>
+  <!-- <hr class="inset"/>
+  <ul data-icon="false" data-role="listview">
+      <li data-role="list-divider">
+          How Can We Help?
+      </li>
+      <li>
+          <a href="child-sponsorship.html">
+              Child Sponsorship
+          </a>
+      </li>
+  </ul> -->
 </div>
 <!-- /panel left -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '126053554502752',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 <script type="text/javascript">
-// document.addEventListener("deviceready", onDeviceReady, false);
+    // document.addEventListener("deviceready", onDeviceReady, false);
 
 // var pageSearch = $(location).attr('search');
+var login = window.localStorage.getItem("login");
 var fbToken = window.localStorage.getItem("fbToken");
 var fbPic = window.localStorage.getItem("fbPic");
 var fbName = window.localStorage.getItem("fbName");
+var userName = window.localStorage.getItem("userName");
+var email = window.localStorage.getItem("email");
+var gender = window.localStorage.getItem("gender");
+var userPic = window.localStorage.getItem("userPic");
 
-
-if (fbToken != undefined) {
-    $('.pre-login').hide();
-    $('.profile-thumbnail').attr('src', fbPic);
-    $('.profile-name').html(fbName);
-    $('.post-login').show();
-} else {
+if(login != undefined){
+    if (fbToken != undefined) {
+        $('.pre-login').hide();
+        $('.nd2-sidepanel-profile .zmdi-settings').parent('a').hide();
+        $('.profile-thumbnail').attr('src', fbPic);
+        $('.profile-name').html(fbName);
+        $('.post-login').show();
+    } else {
+        $('.pre-login').hide();
+        $('.profile-thumbnail').attr('src', userPic);
+        $('.profile-name').html(userName);
+        $('.post-login').show();
+    }
+    // console.log(email);
+}else{
     $('.post-login').hide();
     $('.pre-login').show();
 }
@@ -70,14 +159,25 @@ openFB.init({
 
 
 function logout() {
-    openFB.logout(
-        function() {
-            window.localStorage.clear();
-            // alert('Logout successful');
-            $('.post-login').hide();
-            $('.pre-login').show();
-        },
-        errorHandler);
+    if (fbToken != undefined) {
+        openFB.logout(
+            function() {
+                window.localStorage.clear();
+                // alert('Logout successful');
+                $('.post-login').hide();
+                $('.pre-login').show();
+            },
+            errorHandler);
+    }else{
+        window.localStorage.removeItem("login");
+        $.mobile.changePage('logout-success.html', {
+            allowSamePageTransition: true,
+            transition: 'none',
+            reloadPage: true
+        });
+        $('.post-login').hide();
+        $('.pre-login').show();
+    }
 }
 
 function errorHandler(error) {

@@ -1,3 +1,5 @@
+$orange: #f44336;
+
 .ui-page-theme-a .ui-btn,
 html .ui-bar-a .ui-btn,
 html .ui-body-a .ui-btn,
@@ -63,18 +65,6 @@ html body div.ui-slider-track.ui-body-a .ui-btn-active {
     }
 }
 
-.nd2-sidepanel-profile {
-    padding: 1.5em 1em;
-    background: #222;
-    .profile-thumbnail{
-        margin: -0.5em auto;
-    }
-    .fb-logout {
-        margin-top: .5em;
-        padding: .5em 1em;
-    }
-}
-
 .ui-controlgroup-horizontal {
     .ui-controlgroup-label {
         legend {
@@ -87,9 +77,65 @@ html body div.ui-slider-track.ui-body-a .ui-btn-active {
         }
     }
 }
-.ui-input-text{
+
+.ui-mobile label,
+.ui-controlgroup-label,
+.ui-controlgroup-label legend{
+    color: #fff;
+}
+
+.ui-input-text {
     background: none !important;
-    input{
+    input {
+        color: #fff;
         @include text-shadow(rgba(blue, 0) 0 0 0);
+        @include input-placeholder {
+            color: #666;
+        }
+    }
+    &:after {
+        background-color: #666;
+    }
+    &.error{
+      &:after {
+        background-color: $orange;
+        }  
+    }
+}
+
+.ui-btn,
+a.ui-btn{
+    text-transform: capitalize;
+}
+//sidepanel
+.nd2-sidepanel-profile{
+    padding: 1.5em 1em 1.2em;
+    margin-top: .5em;
+    background: #eee !important;
+    .profile-thumbnail {
+        margin: -0.5em auto;
+    }
+    .profile-text{
+        strong{
+            color: #444;
+            text-transform: uppercase;
+        }
+    }
+    .fb-logout {
+        margin-top: .5em;
+        padding: .5em 1em;
+    }
+    .zmdi{
+        margin: .3em .5em 0 0;
+        &:hover,
+        &:visited{
+            text-decoration: none;
+        }
+    }
+    .ui-btn{
+        @include box-shadow(none !important);
+    }
+    &:after{
+        background: none;
     }
 }

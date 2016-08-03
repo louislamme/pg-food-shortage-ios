@@ -111,7 +111,7 @@ a.ui-btn{
 .nd2-sidepanel-profile{
     padding: 1.5em 1em 1.2em;
     margin-top: .5em;
-    background: #eee;
+    background: #eee !important;
     .profile-thumbnail {
         margin: -0.5em auto;
     }
@@ -134,5 +134,8 @@ a.ui-btn{
     }
     .ui-btn{
         @include box-shadow(none !important);
+    }
+    &:after{
+        background: none;
     }
 }

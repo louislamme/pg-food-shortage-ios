@@ -1,32 +1,103 @@
-<div id="caseStudy" data-role="page" class="nd2-no-menu-swipe">
-    <nd2-include data-src="panel.left.html"></nd2-include>
-    <div data-role="header" data-position="fixed" data-tap-toggle="false">
-        <a href="#leftpanel" class="ui-btn ui-btn-left"><i class="fa fa-bars"></i></a>
-        <h4>Bengal Famine Of 1943</h4>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Case Study
+    </title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="bower_components/jquery-mobile-bower/css/jquery.mobile-1.4.5.css"/>
+    <!-- <link rel="stylesheet" href="bower_components/Waves/dist/waves.min.css" /> -->
+    <link rel="stylesheet" href="bower_components/nativeDroid2/css/nativedroid2.css"/>
+    <link rel="stylesheet" href="bower_components/wow/css/libs/animate.css"/>
+    <link rel="stylesheet" href="bower_components/Swiper/dist/css/swiper.min.css"/>
+    <link rel="stylesheet" href="bower_components/youtubeBackground/src/style.css"/>
+    <link rel="stylesheet" href="bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body>
+    <div class="nd2-no-menu-swipe" data-role="page" id="caseStudy">
+      <nd2-include data-src="panel.left.html"></nd2-include>
+      <div data-position="fixed" data-role="header" data-tap-toggle="false">
+        <a class="ui-btn ui-btn-left" href="#leftpanel">
+          <i class="fa fa-bars"></i>
+        </a>
+        <h4>
+          Bengal Famine Of 1943
+        </h4>
         <ul data-role="nd2tabs" data-swipe="false">
-            <li data-tab="introduction" data-tab-active="true" class="nd2Tabs-active">Introduction</li>
-            <li data-tab="gallery">Gallery</li>
+          <li class="nd2Tabs-active" data-tab="introduction" data-tab-active="true">
+            Introduction
+          </li>
+          <li data-tab="gallery">
+            Gallery
+          </li>
+          <li data-tab="video">
+            Video
+          </li>
         </ul>
-    </div>
-    <div role="main" class="ui-content">
-        <div data-role="nd2tab" data-tab="introduction" class="nd2Tab-active">
-            <img class="img-responsive" src="img/bengal-famine-1943/01.jpg" />
-            <p>The Bengal famine of 1943 struck the Bengal Province of British India during World War II following the Japanese occupation of Burma. Approximately 3 million people died due to famine. Generally the estimates are between 1.5 and 4 million, taking into account death due to starvation, malnutrition and disease, out of Bengal's 60.3 million population. </p>
+      </div>
+      <div class="ui-content" role="main">
+        <div class="nd2Tab-active" data-role="nd2tab" data-tab="introduction">
+          <img class="img-responsive" src="img/bengal-famine-1943/01.jpg"/>
+          <p>
+            The Bengal famine of 1943 struck the Bengal Province of British India during World War II following the Japanese occupation of Burma. Approximately 3 million people died due to famine. Generally the estimates are between 1.5 and 4 million, taking into account death due to starvation, malnutrition and disease, out of Bengal's 60.3 million population.
+          </p>
         </div>
         <div data-role="nd2tab" data-tab="gallery">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/01.jpg)"></div>
-                    <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/02.jpg)"></div>
-                    <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/03.jpg)"></div>
-                    <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/04.jpg)"></div>
-                    <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/05.jpg)"></div>
-                    <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/06.jpg)"></div>
-                    <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/07.jpg)"></div>
-                    <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/08.jpg)"></div>
-                </div>
-                <div class="swiper-pagination"></div>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/01.jpg)"></div>
+              <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/02.jpg)"></div>
+              <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/03.jpg)"></div>
+              <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/04.jpg)"></div>
+              <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/05.jpg)"></div>
+              <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/06.jpg)"></div>
+              <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/07.jpg)"></div>
+              <div class="swiper-slide" style="background-image:url(img/bengal-famine-1943/08.jpg)"></div>
             </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
+        <div data-role="nd2tab" data-tab="video">
+          <div class="RYPP r16-9" data-playlist="PLB0KjhRtVm8cIuZgL1eMlGCySk4zi3jOs">
+            <div class="RYPP-video">
+              <div class="RYPP-video-player">
+                <!-- Will be replaced -->
+              </div>
+            </div>
+            <div class="RYPP-playlist">
+              <header>
+                <h2 class="_h1 RYPP-title">
+                  Playlist title
+                </h2>
+                <p class="RYPP-desc">
+                  Playlist subtitle
+                  <a href="#" target="_blank">
+                    #hashtag
+                  </a>
+                </p>
+              </header>
+              <div class="RYPP-items"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+    <script src="cordova.js" type="text/javascript"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="bower_components/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="bower_components/Waves/dist/waves.min.js"></script>
+    <script src="bower_components/openfb/openfb.js"></script>
+    <script src="bower_components/wow/dist/wow.min.js"></script>
+    <script src="bower_components/nativeDroid2/js/nativedroid2.js"></script>
+    <script src="bower_components/nativeDroid2/nd2settings.js"></script>
+    <script src="bower_components/Swiper/dist/js/swiper.min.js"></script>
+    <script src="bower_components/youtubeBackground/src/jquery.youtubebackground.js"></script>
+    <script src="bower_components/responsive-youtube-player-with-playlist/js/RYPP.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

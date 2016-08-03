@@ -57,6 +57,11 @@ $(document)
       window.location = 'index.html';
     }, changePageDelay);
   })
+  .on('pagecreate', '#updateSuccess', function() {
+    setTimeout(function() {
+      window.location = 'index.html';
+    }, changePageDelay);
+  })
   .on('pagecreate', '#logoutSuccess', function() {
     setTimeout(function() {
       window.location = 'index.html';
@@ -82,15 +87,36 @@ $(document)
     });
     var api_key = 'AIzaSyAz0RAVfhEW4Mqw-Je5PB7cjMTkoaX-3Ds';
     var player = $('.RYPP')
-      .rypp(api_key);
+      .rypp(api_key, {
+        autoplay: false,
+      });
   })
   .on('pagecreate', '#causeOfHunger', function() {})
   .on('pagecreate', '#childSponsorship', function() {})
   .on('pagecreate', '#definitionOfHunger', function() {})
+  .on('pagecreate', '#hungerWorld', function() {
+    var map;
+    var src = 'http://www.google.com/maps/d/kml?mid=1XpYLS4sNcetcWMoMQ3h_7aeNIxE';
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'));
+      loadKmlLayer(src, map);
+    }
+
+    function loadKmlLayer(src, map) {
+      var kmlOptions = {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+      };
+      var kmlLayer = new google.maps.KmlLayer(src, kmlOptions);
+    }
+    initMap();
+  })
   .on('pagecreate', '#membership', function() {
     function register($data, $popup, $popupTitle, $popupContent) {
       $.ajax({
-        url: '/api.php/register',
+        url: 'api.php/register',
         type: "POST",
         contentType: "application/json",
         dataType: 'json',
@@ -105,7 +131,7 @@ $(document)
               .val());
             window.localStorage.setItem('email', $('.form-register .email')
               .val());
-            window.localStorage.setItem('userPic', '/img/user-pic.png');
+            window.localStorage.setItem('userPic', 'img/user-pic.png');
             window.localStorage.setItem('gender', $('.form-register .gender:checked')
               .val());
             $.mobile.changePage('login-success.html', {
@@ -127,9 +153,9 @@ $(document)
       });
     }
 
-    function login($data, $popup, $popupTitle, $popupContent) {
+    function login($dat$popupContent) {
       $.ajax({
-        url: '/api.php/login',
+        url: 'api.php/login',
         type: "POST",
         contentType: "application/json",
         dataType: 'json',
@@ -143,7 +169,7 @@ $(document)
             window.localStorage.setItem('email', msg.info.email);
             window.localStorage.setItem('userName', $('.form-login .username')
               .val());
-            window.localStorage.setItem('userPic', '/img/user-pic.png');
+            window.localStorage.setItem('userPic', 'img/user-pic.png');
             $.mobile.changePage('login-success.html', {
               allowSamePageTransition: true,
               transition: 'none',
@@ -162,37 +188,35 @@ $(document)
         }
       });
     }
-
-    function fbLogin() {
-      openFB.login(function(response) {
-        if (response.status === 'connected') {
-          window.localStorage.setItem("fbToken", response.authResponse.accessToken);
-          openFB.api({
-            path: '/me',
-            success: function(data) {
-              $.mobile.changePage('login-success.html', {
-                allowSamePageTransition: true,
-                transition: 'none',
-                reloadPage: true
-              });
-              console.log(JSON.stringify(data));
-              window.localStorage.setItem('register', 'true');
-              window.localStorage.setItem('fbName', data.name);
-              window.localStorage.setItem('fbPic', 'http://graph.facebook.com/' + data.id + '/picture');
-            },
-            error: fbErrorHandler
-          });
-        } else {
-          alert('Facebook login failed: ' + response.error);
-        }
-      }, {
-        scope: 'email'
-      });
-    }
-
-    function fbErrorHandler(error) {
-      alert(error.message);
-    }
+    // function fbLogin() { //for cordova
+    //   openFB.login(function(response) {
+    //     if (response.status === 'connected') {
+    //       window.localStorage.setItem("fbToken", response.authResponse.accessToken);
+    //       openFB.api({
+    //         path: '/me',
+    //         success: function(data) {
+    //           $.mobile.changePage('login-success.html', {
+    //             allowSamePageTransition: true,
+    //             transition: 'none',
+    //             reloadPage: true
+    //           });
+    //           console.log(JSON.stringify(data));
+    //           window.localStorage.setItem('register', 'true');
+    //           window.localStorage.setItem('fbName', data.name);
+    //           window.localStorage.setItem('fbPic', 'http://graph.facebook.com/' + data.id + '/picture');
+    //         },
+    //         error: fbErrorHandler
+    //       });
+    //     } else {
+    //       alert('Facebook login failed: ' + response.error);
+    //     }
+    //   }, {
+    //     scope: 'email'
+    //   });
+    // }
+    // function fbErrorHandler(error) {
+    //   alert(error.message);
+    // }
     $('.btn-login')
       .on('click', function() {
         // event.preventDefault();
@@ -338,12 +362,40 @@ $(document)
       //facebook api
     $('.fb-login')
       .on('click', function() {
-        fbLogin();
+        // fbLogin();
+        var $dfd = $.fblogin({
+          fbId: '126062877835153'
+        });
+        $dfd.progress(function(response) {
+          // reponse object has two properties 'status' and 'data'
+          switch (response.status) {
+            case 'init.fblogin':
+              console.log('facebook sdk initialized.');
+              break;
+            case 'authenticate.fblogin':
+              window.localStorage.setItem("fbToken", response.data.authResponse.accessToken);
+              console.log(response.data.authResponse.accessToken);
+              break;
+          }
+        });
+        $dfd.done(function(data) {
+          $.mobile.changePage('login-success.html', {
+            allowSamePageTransition: true,
+            transition: 'none',
+            reloadPage: true
+          });
+          // console.log(JSON.stringify(data));
+          window.localStorage.setItem('login', 'true');
+          window.localStorage.setItem('register', 'true');
+          window.localStorage.setItem('fbName', data.name);
+          window.localStorage.setItem('fbPic', 'http://graph.facebook.com/' + data.id + '/picture');
+          console.log(data.name, data.id);
+        });
       })
-    openFB.init({
-      appId: '1301435016551511',
-      tokenStore: window.localStorage
-    });
+      // openFB.init({
+      //   appId: '1301435016551511',
+      //   tokenStore: window.localStorage
+      // });
   })
   .on('pagecreate', '#setting', function() {
     //retreive info and append into inputs
@@ -362,7 +414,7 @@ $(document)
 
     function update($data, $popup, $popupTitle, $popupContent) {
       $.ajax({
-        url: '/api.php/update',
+        url: 'api.php/update',
         type: "POST",
         contentType: "application/json",
         dataType: 'json',
@@ -379,8 +431,8 @@ $(document)
               .val());
             window.localStorage.setItem('gender', $('.form-info .gender:checked')
               .val());
-            window.localStorage.setItem('userPic', '/img/user-pic.png');
-            $.mobile.changePage('login-success.html', {
+            window.localStorage.setItem('userPic', 'img/user-pic.png');
+            $.mobile.changePage('update-success.html', {
               allowSamePageTransition: true,
               transition: 'none',
               reloadPage: true
@@ -402,7 +454,7 @@ $(document)
 
     function rpassword($data, $popup, $popupTitle, $popupContent) {
       $.ajax({
-        url: '/api.php/rpassword',
+        url: 'api.php/rpassword',
         type: "POST",
         contentType: "application/json",
         dataType: 'json',

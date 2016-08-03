@@ -5,21 +5,25 @@
   height: auto;
 }
 
-/* line 2, ../sass/_page.scss */
+/* line 1, ../sass/_page.scss */
+html {
+  overflow: hidden;
+}
+/* line 3, ../sass/_page.scss */
 html.home {
   overflow: hidden;
 }
 
-/* line 6, ../sass/_page.scss */
+/* line 7, ../sass/_page.scss */
 body {
   background: #000 !important;
   opacity: 0;
 }
-/* line 9, ../sass/_page.scss */
+/* line 10, ../sass/_page.scss */
 body #home {
   overflow: hidden;
 }
-/* line 11, ../sass/_page.scss */
+/* line 12, ../sass/_page.scss */
 body #home.ui-page-active {
   height: 100%;
   background: transparent;
@@ -27,12 +31,12 @@ body #home.ui-page-active {
   align-items: center;
   justify-content: center;
 }
-/* line 17, ../sass/_page.scss */
+/* line 18, ../sass/_page.scss */
 body #home.ui-page-active.bg-img {
   background: #000 url(../img/hero-home.jpg) no-repeat;
   background-size: cover;
 }
-/* line 22, ../sass/_page.scss */
+/* line 23, ../sass/_page.scss */
 body #home .ui-header {
   min-height: 65px;
   background: none;
@@ -40,73 +44,75 @@ body #home .ui-header {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
-/* line 27, ../sass/_page.scss */
+/* line 28, ../sass/_page.scss */
 body #home .ui-content {
   text-align: center;
   padding: 0 1.5em;
   position: relative;
   top: -65px;
 }
-/* line 32, ../sass/_page.scss */
+/* line 33, ../sass/_page.scss */
 body #home .ui-content h3 {
   font-size: 30px;
   text-transform: uppercase;
   color: #fff;
   margin: 0;
 }
-/* line 41, ../sass/_page.scss */
+/* line 42, ../sass/_page.scss */
 body #home .ui-content h3 strong {
   font-size: 1.6em;
   font-weight: bold;
   padding: .1em .2em;
   line-height: 1.4em;
 }
-/* line 49, ../sass/_page.scss */
+/* line 50, ../sass/_page.scss */
 body #home .ui-content h3.last-child {
   margin-bottom: .5em;
 }
-/* line 54, ../sass/_page.scss */
+/* line 55, ../sass/_page.scss */
 body #home .bg-video {
   z-index: -1;
   opacity: 0.6;
 }
-/* line 60, ../sass/_page.scss */
+/* line 61, ../sass/_page.scss */
 body #membership .fb-login {
   text-indent: -9999px;
   height: 36px;
   background: #2f5f9e url("../img/fbconnect.png") center center no-repeat;
   background-size: auto 42px;
 }
-/* line 67, ../sass/_page.scss */
+/* line 68, ../sass/_page.scss */
 body #loginSuccess,
-body #logoutSuccess {
+body #logoutSuccess,
+body #updateSuccess {
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-/* line 73, ../sass/_page.scss */
+/* line 75, ../sass/_page.scss */
 body #loginSuccess h2,
-body #logoutSuccess h2 {
+body #logoutSuccess h2,
+body #updateSuccess h2 {
   margin-top: 0;
 }
-/* line 78, ../sass/_page.scss */
+/* line 80, ../sass/_page.scss */
 body #childSponsorship .ui-controlgroup-controls {
   width: 100%;
 }
-/* line 80, ../sass/_page.scss */
+/* line 82, ../sass/_page.scss */
 body #childSponsorship .ui-controlgroup-controls .ui-radio {
   width: 33.33333%;
 }
-/* line 82, ../sass/_page.scss */
+/* line 84, ../sass/_page.scss */
 body #childSponsorship .ui-controlgroup-controls .ui-radio .ui-btn {
   text-align: center;
 }
-/* line 90, ../sass/_page.scss */
+/* line 92, ../sass/_page.scss */
 body #impactOfHunger .body-structure img {
   opacity: 0.7;
 }
-/* line 93, ../sass/_page.scss */
+/* line 95, ../sass/_page.scss */
 body #impactOfHunger .body-structure .spot {
   width: 20px;
   height: 20px;
@@ -129,34 +135,39 @@ body #impactOfHunger .body-structure .spot {
   animation-iteration-count: infinite;
   animation-direction: normal;
 }
-/* line 110, ../sass/_page.scss */
+/* line 112, ../sass/_page.scss */
 body #impactOfHunger .body-structure .spot.spot-1 {
   margin-left: -15px;
   top: 15%;
   left: 50%;
 }
-/* line 115, ../sass/_page.scss */
+/* line 117, ../sass/_page.scss */
 body #impactOfHunger .body-structure .spot.spot-2 {
   margin-left: -15px;
   top: 45%;
   left: 50%;
 }
-/* line 120, ../sass/_page.scss */
+/* line 122, ../sass/_page.scss */
 body #impactOfHunger .body-structure .spot.spot-3 {
   margin-left: -58px;
   top: 48%;
   left: 50%;
 }
-/* line 125, ../sass/_page.scss */
+/* line 127, ../sass/_page.scss */
 body #impactOfHunger .body-structure .spot.spot-4 {
   margin-left: -90px;
   top: 37%;
   left: 50%;
 }
-/* line 130, ../sass/_page.scss */
+/* line 132, ../sass/_page.scss */
 body #impactOfHunger .body-structure .spot.spot-5 {
   top: 55%;
   left: 77%;
+}
+/* line 140, ../sass/_page.scss */
+body #hungerWorld #map {
+  width: 100%;
+  height: 400px;
 }
 
 @-webkit-keyframes zooming {
@@ -873,7 +884,7 @@ a.ui-btn {
 .nd2-sidepanel-profile {
   padding: 1.5em 1em 1.2em;
   margin-top: .5em;
-  background: #eee;
+  background: #eee !important;
 }
 /* line 115, ../sass/_nativedroid2.scss */
 .nd2-sidepanel-profile .profile-thumbnail {
@@ -902,6 +913,10 @@ a.ui-btn {
   -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
+}
+/* line 138, ../sass/_nativedroid2.scss */
+.nd2-sidepanel-profile:after {
+  background: none;
 }
 
 /* line 1, ../sass/_swiper.scss */

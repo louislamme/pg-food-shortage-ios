@@ -31,6 +31,7 @@
     "material-design-iconic-font": "^2.2.0",
     "jquery-validation": "jzaefferer/jquery-validation#^1.15.0",
     "responsive-youtube-player-with-playlist": "carloscabo/responsive-youtube-player-with-playlist",
-    "youtubeBackground": "rochestb/jQuery.YoutubeBackground#^1.0.5"
+    "youtubeBackground": "rochestb/jQuery.YoutubeBackground#^1.0.5",
+    "jquery.fblogin": "ryandrewjohnson/jquery-fblogin#^1.1.3"
   }
 }
