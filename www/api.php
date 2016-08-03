@@ -95,17 +95,17 @@
 
 
 	function login($data) {
-	    // $request = Slim::getInstance()->request();
-	    $user = json_decode($data);
-	    // var_dumb($user);
+    // $request = Slim::getInstance()->request();
+    $user = json_decode($data);
+    // var_dumb($user);
 
-	    $db = getConnection();
-	    $checkUser = $db->prepare('SELECT * FROM members WHERE username=:username AND password=:password');
+    $db = getConnection();
+    $checkUser = $db->prepare('SELECT * FROM members WHERE username=:username AND password=:password');
 		$checkUser->bindParam("username", $user->username);
-        $checkUser->bindParam("password", $user->password);
-  		$checkUser->execute();
-  		$data = $checkUser->fetch();
-	    if ($checkUser->rowCount() == 1) {
+      $checkUser->bindParam("password", $user->password);
+		$checkUser->execute();
+		$data = $checkUser->fetch();
+    if ($checkUser->rowCount() == 1) {
 			$response['status'] = 'success';
 			$response['title'] = 'Login success';
 			$response['message'] = 'Login successfully';
